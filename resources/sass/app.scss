@@ -1,0 +1,28 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// @import "~vuetify/dist/vuetify.min.css";
+
+.v-input--checkbox {
+    .v-input__control {
+        .v-input__slot {
+            .v-label {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+.v-radio {
+    .v-label {
+        margin-bottom: 0 !important;
+    }
+}

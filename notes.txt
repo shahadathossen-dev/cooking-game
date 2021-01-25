@@ -1,0 +1,3 @@
+Bootstratp js clean up
+Vue instance globally.
+webpack.mix.js update

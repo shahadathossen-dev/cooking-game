@@ -1,0 +1,13 @@
+.content-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin-bottom: 0 !important;
+}
+
+.v-expansion-panel-content__wrap {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
