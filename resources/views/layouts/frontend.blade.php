@@ -245,6 +245,158 @@
                                 </a>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>WC1A</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                {{-- <a href="{{route('woodchop.wc1a.ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('woodchop.wc1a.merged-ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a> --}}
+                                <a href="{{route('woodchop.wc1a.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>WC2A</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                {{-- <a href="{{route('woodchop.wc2a.ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('woodchop.wc2a.merged-ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a> --}}
+                                <a href="{{route('woodchop.wc2a.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>WC1B</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                {{-- <a href="{{route('woodchop.wc1b.ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('woodchop.wc1b.merged-ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a> --}}
+                                <a href="{{route('woodchop.wc1b.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>WC2B</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                {{-- <a href="{{route('woodchop.wc2b.ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('woodchop.wc2b.merged-ingredients.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a> --}}
+                                <a href="{{route('woodchop.wc2b.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+                                
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
                     </v-expansion-panels>
                     
                     @endif

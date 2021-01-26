@@ -5,12 +5,12 @@
 <v-container>
     <v-row class="justify-content-center">
         <v-col md="10" sm="12">
-            <v-card>
+            {{-- <v-card>
                 <v-card-title>Dashboard</v-card-title>
                 <v-card-text>
-                    <h4 class="text-center">Buil Something Amazing!</h4>    
+                    <h4 class="text-center">Build Something Amazing!</h4>    
                 </v-card-text>
-            </v-card>
+            </v-card> --}}
         </v-col>
     </v-row>
 </v-container>
