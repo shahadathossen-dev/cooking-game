@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\WoodChop\WC2A;
+namespace App\Models\WoodChop\WC2B;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
