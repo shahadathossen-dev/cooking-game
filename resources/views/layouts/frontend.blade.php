@@ -52,7 +52,7 @@
                             <v-list-item-icon>
                                 <v-icon>mdi-view-dashboard</v-icon>
                             </v-list-item-icon>
-                    
+
                             <v-list-item-content>
                                 <v-list-item-title>{{ 'Dashboard' }}</v-list-item-title>
                             </v-list-item-content>
@@ -63,7 +63,7 @@
                             <v-list-item-icon>
                                 <v-icon>mdi-account-outline</v-icon>
                             </v-list-item-icon>
-                    
+
                             <v-list-item-content>
                                 <v-list-item-title>{{ 'Profile' }}</v-list-item-title>
                             </v-list-item-content>
@@ -74,7 +74,7 @@
                             <v-list-item-icon>
                                 <v-icon>mdi-key-outline</v-icon>
                             </v-list-item-icon>
-                    
+
                             <v-list-item-content>
                                 <v-list-item-title>{{ 'Change Password' }}</v-list-item-title>
                             </v-list-item-content>
@@ -86,7 +86,7 @@
                             <v-list-item-icon>
                                 <v-icon>mdi-account-box</v-icon>
                             </v-list-item-icon>
-                    
+
                             <v-list-item-content>
                                 <v-list-item-title>{{ 'Users' }}</v-list-item-title>
                             </v-list-item-content>
@@ -101,7 +101,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -112,7 +112,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -123,7 +123,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -139,7 +139,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -150,7 +150,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -161,7 +161,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -177,7 +177,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -188,7 +188,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -199,7 +199,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -215,7 +215,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -226,7 +226,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -237,7 +237,7 @@
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -248,34 +248,12 @@
                         <v-expansion-panel>
                             <v-expansion-panel-header>WC1A</v-expansion-panel-header>
                             <v-expansion-panel-content>
-                                {{-- <a href="{{route('woodchop.wc1a.ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a>
-                                <a href="{{route('woodchop.wc1a.merged-ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a> --}}
                                 <a href="{{route('woodchop.wc1a.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -283,37 +261,31 @@
                                 </a>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
-                        <v-expansion-panel>
+                        {{-- <v-expansion-panel>
                             <v-expansion-panel-header>WC2A</v-expansion-panel-header>
                             <v-expansion-panel-content>
-                                {{-- <a href="{{route('woodchop.wc2a.ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a>
-                                <a href="{{route('woodchop.wc2a.merged-ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a> --}}
                                 <a href="{{route('woodchop.wc2a.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel> --}}
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>WC3A</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <a href="{{route('woodchop.wc3a.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -324,34 +296,12 @@
                         <v-expansion-panel>
                             <v-expansion-panel-header>WC1B</v-expansion-panel-header>
                             <v-expansion-panel-content>
-                                {{-- <a href="{{route('woodchop.wc1b.ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a>
-                                <a href="{{route('woodchop.wc1b.merged-ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a> --}}
                                 <a href="{{route('woodchop.wc1b.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -359,37 +309,31 @@
                                 </a>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
-                        <v-expansion-panel>
+                        {{-- <v-expansion-panel>
                             <v-expansion-panel-header>WC2B</v-expansion-panel-header>
                             <v-expansion-panel-content>
-                                {{-- <a href="{{route('woodchop.wc2b.ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Ingredients' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a>
-                                <a href="{{route('woodchop.wc2b.merged-ingredients.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-                                
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a> --}}
                                 <a href="{{route('woodchop.wc2b.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
-                                
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel> --}}
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>WC3B</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <a href="{{route('woodchop.wc3b.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
                                         </v-list-item-content>
@@ -398,11 +342,11 @@
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                     </v-expansion-panels>
-                    
+
                     @endif
-                    
+
                 </v-list>
-              
+
                 <template v-slot:append>
                     <v-list>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -412,11 +356,11 @@
                                 <v-list-item-icon>
                                     <v-icon>mdi-logout</v-icon>
                                 </v-list-item-icon>
-                        
+
                                 <v-list-item-content>
                                     <v-list-item-title>{{ 'Log out' }}</v-list-item-title>
                                 </v-list-item-content>
-                            </v-list-item>    
+                            </v-list-item>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
@@ -425,7 +369,7 @@
                 </template>
             </v-navigation-drawer>
             @endauth
-        
+
             <v-app-bar app>
                 @auth
                 <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
@@ -435,7 +379,7 @@
                     <a href="/" tag style="cursor: pointer; text-decoration: none; color: grey">{{config('app.name')}}</a>
                 </v-toolbar-title>
             </v-app-bar>
-        
+
             <!-- Sizes your content based upon application components -->
             <v-main>
                 @yield('content')

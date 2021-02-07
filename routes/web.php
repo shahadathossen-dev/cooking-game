@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    
+
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -30,9 +30,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('users/{user}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
     Route::put('users/{user}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
     Route::post('users/{user}', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
-    
+
     Route::get('roles', [App\Http\Controllers\RoleController::class, 'roles'])->name('roles.index');
-    
+
 	Route::get('profile', [App\Http\Controllers\UserController::class, 'profile'])->name('user.profile');
 	Route::put('profile', [App\Http\Controllers\UserController::class, 'updateProfile'])->name('profile.update');
 	Route::get('reset-password', [App\Http\Controllers\UserController::class, 'password'])->name('user.password');
@@ -65,7 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cm1a/attributes/{attribute}/edit', [App\Http\Controllers\CM1A\AttributeController::class, 'edit'])->name('cm1a.attributes.edit');
     Route::put('cm1a/attributes/{attribute}', [App\Http\Controllers\CM1A\AttributeController::class, 'update'])->name('cm1a.attributes.update');
     Route::post('cm1a/attributes/{attribute}', [App\Http\Controllers\CM1A\AttributeController::class, 'destroy'])->name('cm1a.attributes.destroy');
-    
+
     // CM2A ROUTES
         // INGREDIENTS ROUTES
     Route::get('cm2a/ingredients', [App\Http\Controllers\CM2A\IngredientController::class, 'index'])->name('cm2a.ingredients.index');
@@ -93,7 +93,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cm2a/attributes/{attribute}/edit', [App\Http\Controllers\CM2A\AttributeController::class, 'edit'])->name('cm2a.attributes.edit');
     Route::put('cm2a/attributes/{attribute}', [App\Http\Controllers\CM2A\AttributeController::class, 'update'])->name('cm2a.attributes.update');
     Route::post('cm2a/attributes/{attribute}', [App\Http\Controllers\CM2A\AttributeController::class, 'destroy'])->name('cm2a.attributes.destroy');
-     
+
     // CM1B ROUTES
     // INGREDIENTS ROUTES
     Route::get('cm1b/ingredients', [App\Http\Controllers\CM1B\IngredientController::class, 'index'])->name('cm1b.ingredients.index');
@@ -121,7 +121,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cm1b/attributes/{attribute}/edit', [App\Http\Controllers\CM1B\AttributeController::class, 'edit'])->name('cm1b.attributes.edit');
     Route::put('cm1b/attributes/{attribute}', [App\Http\Controllers\CM1B\AttributeController::class, 'update'])->name('cm1b.attributes.update');
     Route::post('cm1b/attributes/{attribute}', [App\Http\Controllers\CM1B\AttributeController::class, 'destroy'])->name('cm1b.attributes.destroy');
-    
+
     // CM2B ROUTES
         // INGREDIENTS ROUTES
     Route::get('cm2b/ingredients', [App\Http\Controllers\CM2B\IngredientController::class, 'index'])->name('cm2b.ingredients.index');
@@ -149,27 +149,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cm2b/attributes/{attribute}/edit', [App\Http\Controllers\CM2B\AttributeController::class, 'edit'])->name('cm2b.attributes.edit');
     Route::put('cm2b/attributes/{attribute}', [App\Http\Controllers\CM2B\AttributeController::class, 'update'])->name('cm2b.attributes.update');
     Route::post('cm2b/attributes/{attribute}', [App\Http\Controllers\CM2B\AttributeController::class, 'destroy'])->name('cm2b.attributes.destroy');
-    
+
     // WoodChop CM1A ROUTES
-        // INGREDIENTS ROUTES
-    Route::get('woodchop/wc1a/ingredients', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'index'])->name('woodchop.wc1a.ingredients.index');
-    Route::get('woodchop/wc1a/ingredients/create', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'create'])->name('woodchop.wc1a.ingredients.create');
-    Route::post('woodchop/wc1a/ingredients', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'store'])->name('woodchop.wc1a.ingredients.store');
-    Route::get('woodchop/wc1a/ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'edit'])->name('woodchop.wc1a.ingredients.edit');
-    Route::put('woodchop/wc1a/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'update'])->name('woodchop.wc1a.ingredients.update');
-    Route::post('woodchop/wc1a/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'destroy'])->name('woodchop.wc1a.ingredients.destroy');
-
-    Route::get('woodchop/wc1a/ingredients/list', [App\Http\Controllers\WoodChop\WC1A\IngredientController::class, 'list'])->name('woodchop.wc1a.ingredients.list');
-
-
-        // MERGED INGREDIENTS ROUTES
-    Route::get('woodchop/wc1a/merged-ingredients', [App\Http\Controllers\WoodChop\WC1A\MergedIngredientController::class, 'index'])->name('woodchop.wc1a.merged-ingredients.index');
-    Route::get('woodchop/wc1a/merged-ingredients/create', [App\Http\Controllers\WoodChop\WC1A\MergedIngredientController::class, 'create'])->name('woodchop.wc1a.merged-ingredients.create');
-    Route::post('woodchop/wc1a/merged-ingredients', [App\Http\Controllers\WoodChop\WC1A\MergedIngredientController::class, 'store'])->name('woodchop.wc1a.merged-ingredients.store');
-    Route::get('woodchop/wc1a/merged-ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC1A\MergedIngredientController::class, 'edit'])->name('woodchop.wc1a.merged-ingredients.edit');
-    Route::put('woodchop/wc1a/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1A\MergedIngredientController::class, 'update'])->name('woodchop.wc1a.merged-ingredients.update');
-    Route::post('woodchop/wc1a/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1A\MergedIngredientController::class, 'destroy'])->name('woodchop.wc1a.merged-ingredients.destroy');
-
         // Settings ROUTES
     Route::get('woodchop/wc1a/attributes', [App\Http\Controllers\WoodChop\WC1A\AttributeController::class, 'index'])->name('woodchop.wc1a.attributes.index');
     Route::get('woodchop/wc1a/attributes/create', [App\Http\Controllers\WoodChop\WC1A\AttributeController::class, 'create'])->name('woodchop.wc1a.attributes.create');
@@ -177,27 +158,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('woodchop/wc1a/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC1A\AttributeController::class, 'edit'])->name('woodchop.wc1a.attributes.edit');
     Route::put('woodchop/wc1a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC1A\AttributeController::class, 'update'])->name('woodchop.wc1a.attributes.update');
     Route::post('woodchop/wc1a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC1A\AttributeController::class, 'destroy'])->name('woodchop.wc1a.attributes.destroy');
-    
+
     // CM2A ROUTES
-        // INGREDIENTS ROUTES
-    Route::get('woodchop/wc2a/ingredients', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'index'])->name('woodchop.wc2a.ingredients.index');
-    Route::get('woodchop/wc2a/ingredients/create', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'create'])->name('woodchop.wc2a.ingredients.create');
-    Route::post('woodchop/wc2a/ingredients', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'store'])->name('woodchop.wc2a.ingredients.store');
-    Route::get('woodchop/wc2a/ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'edit'])->name('woodchop.wc2a.ingredients.edit');
-    Route::put('woodchop/wc2a/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'update'])->name('woodchop.wc2a.ingredients.update');
-    Route::post('woodchop/wc2a/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'destroy'])->name('woodchop.wc2a.ingredients.destroy');
-
-    Route::get('woodchop/wc2a/ingredients/list', [App\Http\Controllers\WoodChop\WC2A\IngredientController::class, 'list'])->name('woodchop.wc2a.ingredients.list');
-
-
-        // MERGED INGREDIENTS ROUTES
-    Route::get('woodchop/wc2a/merged-ingredients', [App\Http\Controllers\WoodChop\WC2A\MergedIngredientController::class, 'index'])->name('woodchop.wc2a.merged-ingredients.index');
-    Route::get('woodchop/wc2a/merged-ingredients/create', [App\Http\Controllers\WoodChop\WC2A\MergedIngredientController::class, 'create'])->name('woodchop.wc2a.merged-ingredients.create');
-    Route::post('woodchop/wc2a/merged-ingredients', [App\Http\Controllers\WoodChop\WC2A\MergedIngredientController::class, 'store'])->name('woodchop.wc2a.merged-ingredients.store');
-    Route::get('woodchop/wc2a/merged-ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC2A\MergedIngredientController::class, 'edit'])->name('woodchop.wc2a.merged-ingredients.edit');
-    Route::put('woodchop/wc2a/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2A\MergedIngredientController::class, 'update'])->name('woodchop.wc2a.merged-ingredients.update');
-    Route::post('woodchop/wc2a/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2A\MergedIngredientController::class, 'destroy'])->name('woodchop.wc2a.merged-ingredients.destroy');
-
         // Settings ROUTES
     Route::get('woodchop/wc2a/attributes', [App\Http\Controllers\WoodChop\WC2A\AttributeController::class, 'index'])->name('woodchop.wc2a.attributes.index');
     Route::get('woodchop/wc2a/attributes/create', [App\Http\Controllers\WoodChop\WC2A\AttributeController::class, 'create'])->name('woodchop.wc2a.attributes.create');
@@ -205,27 +167,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('woodchop/wc2a/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC2A\AttributeController::class, 'edit'])->name('woodchop.wc2a.attributes.edit');
     Route::put('woodchop/wc2a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2A\AttributeController::class, 'update'])->name('woodchop.wc2a.attributes.update');
     Route::post('woodchop/wc2a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2A\AttributeController::class, 'destroy'])->name('woodchop.wc2a.attributes.destroy');
-        
+
     // CM1B ROUTES
-    // INGREDIENTS ROUTES
-    Route::get('woodchop/wc1b/ingredients', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'index'])->name('woodchop.wc1b.ingredients.index');
-    Route::get('woodchop/wc1b/ingredients/create', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'create'])->name('woodchop.wc1b.ingredients.create');
-    Route::post('woodchop/wc1b/ingredients', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'store'])->name('woodchop.wc1b.ingredients.store');
-    Route::get('woodchop/wc1b/ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'edit'])->name('woodchop.wc1b.ingredients.edit');
-    Route::put('woodchop/wc1b/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'update'])->name('woodchop.wc1b.ingredients.update');
-    Route::post('woodchop/wc1b/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'destroy'])->name('woodchop.wc1b.ingredients.destroy');
-
-    Route::get('woodchop/wc1b/ingredients/list', [App\Http\Controllers\WoodChop\WC1B\IngredientController::class, 'list'])->name('woodchop.wc1b.ingredients.list');
-
-
-        // MERGED INGREDIENTS ROUTES
-    Route::get('woodchop/wc1b/merged-ingredients', [App\Http\Controllers\WoodChop\WC1B\MergedIngredientController::class, 'index'])->name('woodchop.wc1b.merged-ingredients.index');
-    Route::get('woodchop/wc1b/merged-ingredients/create', [App\Http\Controllers\WoodChop\WC1B\MergedIngredientController::class, 'create'])->name('woodchop.wc1b.merged-ingredients.create');
-    Route::post('woodchop/wc1b/merged-ingredients', [App\Http\Controllers\WoodChop\WC1B\MergedIngredientController::class, 'store'])->name('woodchop.wc1b.merged-ingredients.store');
-    Route::get('woodchop/wc1b/merged-ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC1B\MergedIngredientController::class, 'edit'])->name('woodchop.wc1b.merged-ingredients.edit');
-    Route::put('woodchop/wc1b/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1B\MergedIngredientController::class, 'update'])->name('woodchop.wc1b.merged-ingredients.update');
-    Route::post('woodchop/wc1b/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC1B\MergedIngredientController::class, 'destroy'])->name('woodchop.wc1b.merged-ingredients.destroy');
-
         // Settings ROUTES
     Route::get('woodchop/wc1b/attributes', [App\Http\Controllers\WoodChop\WC1B\AttributeController::class, 'index'])->name('woodchop.wc1b.attributes.index');
     Route::get('woodchop/wc1b/attributes/create', [App\Http\Controllers\WoodChop\WC1B\AttributeController::class, 'create'])->name('woodchop.wc1b.attributes.create');
@@ -233,27 +176,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('woodchop/wc1b/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC1B\AttributeController::class, 'edit'])->name('woodchop.wc1b.attributes.edit');
     Route::put('woodchop/wc1b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC1B\AttributeController::class, 'update'])->name('woodchop.wc1b.attributes.update');
     Route::post('woodchop/wc1b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC1B\AttributeController::class, 'destroy'])->name('woodchop.wc1b.attributes.destroy');
-    
+
     // CM2B ROUTES
-        // INGREDIENTS ROUTES
-    Route::get('woodchop/wc2b/ingredients', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'index'])->name('woodchop.wc2b.ingredients.index');
-    Route::get('woodchop/wc2b/ingredients/create', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'create'])->name('woodchop.wc2b.ingredients.create');
-    Route::post('woodchop/wc2b/ingredients', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'store'])->name('woodchop.wc2b.ingredients.store');
-    Route::get('woodchop/wc2b/ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'edit'])->name('woodchop.wc2b.ingredients.edit');
-    Route::put('woodchop/wc2b/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'update'])->name('woodchop.wc2b.ingredients.update');
-    Route::post('woodchop/wc2b/ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'destroy'])->name('woodchop.wc2b.ingredients.destroy');
-
-    Route::get('woodchop/wc2b/ingredients/list', [App\Http\Controllers\WoodChop\WC2B\IngredientController::class, 'list'])->name('woodchop.wc2b.ingredients.list');
-
-
-        // MERGED INGREDIENTS ROUTES
-    Route::get('woodchop/wc2b/merged-ingredients', [App\Http\Controllers\WoodChop\WC2B\MergedIngredientController::class, 'index'])->name('woodchop.wc2b.merged-ingredients.index');
-    Route::get('woodchop/wc2b/merged-ingredients/create', [App\Http\Controllers\WoodChop\WC2B\MergedIngredientController::class, 'create'])->name('woodchop.wc2b.merged-ingredients.create');
-    Route::post('woodchop/wc2b/merged-ingredients', [App\Http\Controllers\WoodChop\WC2B\MergedIngredientController::class, 'store'])->name('woodchop.wc2b.merged-ingredients.store');
-    Route::get('woodchop/wc2b/merged-ingredients/{ingredient}/edit', [App\Http\Controllers\WoodChop\WC2B\MergedIngredientController::class, 'edit'])->name('woodchop.wc2b.merged-ingredients.edit');
-    Route::put('woodchop/wc2b/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2B\MergedIngredientController::class, 'update'])->name('woodchop.wc2b.merged-ingredients.update');
-    Route::post('woodchop/wc2b/merged-ingredients/{ingredient}', [App\Http\Controllers\WoodChop\WC2B\MergedIngredientController::class, 'destroy'])->name('woodchop.wc2b.merged-ingredients.destroy');
-
         // Settings ROUTES
     Route::get('woodchop/wc2b/attributes', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'index'])->name('woodchop.wc2b.attributes.index');
     Route::get('woodchop/wc2b/attributes/create', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'create'])->name('woodchop.wc2b.attributes.create');
@@ -261,6 +185,23 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('woodchop/wc2b/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'edit'])->name('woodchop.wc2b.attributes.edit');
     Route::put('woodchop/wc2b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'update'])->name('woodchop.wc2b.attributes.update');
     Route::post('woodchop/wc2b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'destroy'])->name('woodchop.wc2b.attributes.destroy');
-        
+
+    // CM3A ROUTES
+        // Settings ROUTES
+    Route::get('woodchop/wc3a/attributes', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'index'])->name('woodchop.wc3a.attributes.index');
+    Route::get('woodchop/wc3a/attributes/create', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'create'])->name('woodchop.wc3a.attributes.create');
+    Route::post('woodchop/wc3a/attributes', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'store'])->name('woodchop.wc3a.attributes.store');
+    Route::get('woodchop/wc3a/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'edit'])->name('woodchop.wc3a.attributes.edit');
+    Route::put('woodchop/wc3a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'update'])->name('woodchop.wc3a.attributes.update');
+    Route::post('woodchop/wc3a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'destroy'])->name('woodchop.wc3a.attributes.destroy');
+
+    // CM3B ROUTES
+        // Settings ROUTES
+    Route::get('woodchop/wc3b/attributes', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'index'])->name('woodchop.wc3b.attributes.index');
+    Route::get('woodchop/wc3b/attributes/create', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'create'])->name('woodchop.wc3b.attributes.create');
+    Route::post('woodchop/wc3b/attributes', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'store'])->name('woodchop.wc3b.attributes.store');
+    Route::get('woodchop/wc3b/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'edit'])->name('woodchop.wc3b.attributes.edit');
+    Route::put('woodchop/wc3b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'update'])->name('woodchop.wc3b.attributes.update');
+    Route::post('woodchop/wc3b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'destroy'])->name('woodchop.wc3b.attributes.destroy');
 
 });
