@@ -46,6 +46,9 @@
                                     {{ __('Score') }}
                                 </th>
                                 <th>
+                                    {{ __('Avatar') }}
+                                </th>
+                                <th>
                                     {{ __('Creation date') }}
                                 </th>
                                 <th>
@@ -68,6 +71,9 @@
                                         {{ $ingredient->ing_score }}
                                     </td>
                                     <td>
+                                        <img style="max-width: 100px;" src="{{ $ingredient->ing_photo_link }}" alt="{{$ingredient->ing}} avatar">
+                                    </td>
+                                    <td>
                                         {{ $ingredient->create_time->format('Y-m-d') }}
                                     </td>
                                     <td class="td-actions text-right">
@@ -78,7 +84,7 @@
                                                 <i class="material-icons">edit</i>
                                                 <div class="ripple-container"></div>
                                             </a>
-                                        
+
                                             <button type="submit" class="btn btn-danger btn-sm" data-original-title="" title="Delete ingredient" onclick="confirm('Are you sure you want to delete the ingredient?') ? this.parentElement.submit() : event.preventDefault()">
                                                 <i class="material-icons">close</i>
                                                 <div class="ripple-container"></div>

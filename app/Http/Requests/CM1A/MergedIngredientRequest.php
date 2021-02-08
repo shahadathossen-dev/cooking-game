@@ -29,6 +29,7 @@ class MergedIngredientRequest extends FormRequest
             'ing1' => ['required', 'string'],
             'ing2' => ['required', 'string'],
             'multi' => ['required', 'numeric'],
+            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }

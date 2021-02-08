@@ -58,6 +58,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('cm1a/merged-ingredients/{ingredient}', [App\Http\Controllers\CM1A\MergedIngredientController::class, 'update'])->name('cm1a.merged-ingredients.update');
     Route::post('cm1a/merged-ingredients/{ingredient}', [App\Http\Controllers\CM1A\MergedIngredientController::class, 'destroy'])->name('cm1a.merged-ingredients.destroy');
 
+        // INGREDIENTS PRIORITY ROUTES
+    Route::get('cm1a/ingredient-priority', [App\Http\Controllers\CM1A\IngredientPriorityController::class, 'index'])->name('cm1a.ingredient-priority.index');
+    Route::get('cm1a/ingredient-priority/create', [App\Http\Controllers\CM1A\IngredientPriorityController::class, 'create'])->name('cm1a.ingredient-priority.create');
+    Route::post('cm1a/ingredient-priority', [App\Http\Controllers\CM1A\IngredientPriorityController::class, 'store'])->name('cm1a.ingredient-priority.store');
+    Route::get('cm1a/ingredient-priority/{ingredient}/edit', [App\Http\Controllers\CM1A\IngredientPriorityController::class, 'edit'])->name('cm1a.ingredient-priority.edit');
+    Route::put('cm1a/ingredient-priority/{ingredient}', [App\Http\Controllers\CM1A\IngredientPriorityController::class, 'update'])->name('cm1a.ingredient-priority.update');
+    Route::post('cm1a/ingredient-priority/{ingredient}', [App\Http\Controllers\CM1A\IngredientPriorityController::class, 'destroy'])->name('cm1a.ingredient-priority.destroy');
+
         // Settings ROUTES
     Route::get('cm1a/attributes', [App\Http\Controllers\CM1A\AttributeController::class, 'index'])->name('cm1a.attributes.index');
     Route::get('cm1a/attributes/create', [App\Http\Controllers\CM1A\AttributeController::class, 'create'])->name('cm1a.attributes.create');
@@ -85,6 +93,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cm2a/merged-ingredients/{ingredient}/edit', [App\Http\Controllers\CM2A\MergedIngredientController::class, 'edit'])->name('cm2a.merged-ingredients.edit');
     Route::put('cm2a/merged-ingredients/{ingredient}', [App\Http\Controllers\CM2A\MergedIngredientController::class, 'update'])->name('cm2a.merged-ingredients.update');
     Route::post('cm2a/merged-ingredients/{ingredient}', [App\Http\Controllers\CM2A\MergedIngredientController::class, 'destroy'])->name('cm2a.merged-ingredients.destroy');
+
+        // INGREDIENTS PRIORITY ROUTES
+    Route::get('cm2a/ingredient-priority', [App\Http\Controllers\CM2A\IngredientPriorityController::class, 'index'])->name('cm2a.ingredient-priority.index');
+    Route::get('cm2a/ingredient-priority/create', [App\Http\Controllers\CM2A\IngredientPriorityController::class, 'create'])->name('cm2a.ingredient-priority.create');
+    Route::post('cm2a/ingredient-priority', [App\Http\Controllers\CM2A\IngredientPriorityController::class, 'store'])->name('cm2a.ingredient-priority.store');
+    Route::get('cm2a/ingredient-priority/{ingredient}/edit', [App\Http\Controllers\CM2A\IngredientPriorityController::class, 'edit'])->name('cm2a.ingredient-priority.edit');
+    Route::put('cm2a/ingredient-priority/{ingredient}', [App\Http\Controllers\CM2A\IngredientPriorityController::class, 'update'])->name('cm2a.ingredient-priority.update');
+    Route::post('cm2a/ingredient-priority/{ingredient}', [App\Http\Controllers\CM2A\IngredientPriorityController::class, 'destroy'])->name('cm2a.ingredient-priority.destroy');
 
         // Settings ROUTES
     Route::get('cm2a/attributes', [App\Http\Controllers\CM2A\AttributeController::class, 'index'])->name('cm2a.attributes.index');
@@ -114,6 +130,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('cm1b/merged-ingredients/{ingredient}', [App\Http\Controllers\CM1B\MergedIngredientController::class, 'update'])->name('cm1b.merged-ingredients.update');
     Route::post('cm1b/merged-ingredients/{ingredient}', [App\Http\Controllers\CM1B\MergedIngredientController::class, 'destroy'])->name('cm1b.merged-ingredients.destroy');
 
+        // INGREDIENTS PRIORITY ROUTES
+    Route::get('cm1b/ingredient-priority', [App\Http\Controllers\CM1B\IngredientPriorityController::class, 'index'])->name('cm1b.ingredient-priority.index');
+    Route::get('cm1b/ingredient-priority/create', [App\Http\Controllers\CM1B\IngredientPriorityController::class, 'create'])->name('cm1b.ingredient-priority.create');
+    Route::post('cm1b/ingredient-priority', [App\Http\Controllers\CM1B\IngredientPriorityController::class, 'store'])->name('cm1b.ingredient-priority.store');
+    Route::get('cm1b/ingredient-priority/{ingredient}/edit', [App\Http\Controllers\CM1B\IngredientPriorityController::class, 'edit'])->name('cm1b.ingredient-priority.edit');
+    Route::put('cm1b/ingredient-priority/{ingredient}', [App\Http\Controllers\CM1B\IngredientPriorityController::class, 'update'])->name('cm1b.ingredient-priority.update');
+    Route::post('cm1b/ingredient-priority/{ingredient}', [App\Http\Controllers\CM1B\IngredientPriorityController::class, 'destroy'])->name('cm1b.ingredient-priority.destroy');
+
         // Settings ROUTES
     Route::get('cm1b/attributes', [App\Http\Controllers\CM1B\AttributeController::class, 'index'])->name('cm1b.attributes.index');
     Route::get('cm1b/attributes/create', [App\Http\Controllers\CM1B\AttributeController::class, 'create'])->name('cm1b.attributes.create');
@@ -141,6 +165,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cm2b/merged-ingredients/{ingredient}/edit', [App\Http\Controllers\CM2B\MergedIngredientController::class, 'edit'])->name('cm2b.merged-ingredients.edit');
     Route::put('cm2b/merged-ingredients/{ingredient}', [App\Http\Controllers\CM2B\MergedIngredientController::class, 'update'])->name('cm2b.merged-ingredients.update');
     Route::post('cm2b/merged-ingredients/{ingredient}', [App\Http\Controllers\CM2B\MergedIngredientController::class, 'destroy'])->name('cm2b.merged-ingredients.destroy');
+
+        // INGREDIENTS PRIORITY ROUTES
+    Route::get('cm2b/ingredient-priority', [App\Http\Controllers\CM2B\IngredientPriorityController::class, 'index'])->name('cm2b.ingredient-priority.index');
+    Route::get('cm2b/ingredient-priority/create', [App\Http\Controllers\CM2B\IngredientPriorityController::class, 'create'])->name('cm2b.ingredient-priority.create');
+    Route::post('cm2b/ingredient-priority', [App\Http\Controllers\CM2B\IngredientPriorityController::class, 'store'])->name('cm2b.ingredient-priority.store');
+    Route::get('cm2b/ingredient-priority/{ingredient}/edit', [App\Http\Controllers\CM2B\IngredientPriorityController::class, 'edit'])->name('cm2b.ingredient-priority.edit');
+    Route::put('cm2b/ingredient-priority/{ingredient}', [App\Http\Controllers\CM2B\IngredientPriorityController::class, 'update'])->name('cm2b.ingredient-priority.update');
+    Route::post('cm2b/ingredient-priority/{ingredient}', [App\Http\Controllers\CM2B\IngredientPriorityController::class, 'destroy'])->name('cm2b.ingredient-priority.destroy');
 
         // Settings ROUTES
     Route::get('cm2b/attributes', [App\Http\Controllers\CM2B\AttributeController::class, 'index'])->name('cm2b.attributes.index');

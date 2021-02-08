@@ -27,6 +27,7 @@ class IngredientRequest extends FormRequest
         return [
             'ing' => ['required', 'string', 'unique:1B_ingredients,ing,' . $id_ing . ',id_ing'],
             'ing_priority' => ['required', 'numeric'],
+            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'ing_score' => ['required', 'numeric'],
         ];
     }

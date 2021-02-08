@@ -118,6 +118,17 @@
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
+                                <a href="{{route('cm1a.ingredient-priority.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients Priority' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
                                 <a href="{{route('cm1a.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
@@ -153,6 +164,17 @@
 
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('cm2a.ingredient-priority.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients Priority' }}</v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
@@ -194,6 +216,17 @@
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
+                                <a href="{{route('cm1b.ingredient-priority.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients Priority' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
                                 <a href="{{route('cm1b.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
@@ -229,6 +262,17 @@
 
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Merged Ingredient' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('cm2b.ingredient-priority.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Ingredients Priority' }}</v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>

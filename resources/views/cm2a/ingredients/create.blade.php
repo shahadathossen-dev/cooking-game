@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form method="post" action="{{ route('cm2a.ingredients.store') }}" autocomplete="off" class="form-horizontal">
+                <form method="post" action="{{ route('cm2a.ingredients.store') }}" autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
                     @csrf
                     @method('post')
 
@@ -45,6 +45,17 @@
                                             <input class="form-control{{ $errors->has('ing_score') ? ' is-invalid' : '' }}" name="ing_score" id="input-ing_score" type="number" placeholder="{{ __('10') }}" required />
                                             @if ($errors->has('ing_score'))
                                                 <span id="ing_score-error" class="error text-danger" for="input-ing_score">{{ $errors->first('ing_score') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">{{ __('Avatar') }}</label>
+                                    <div class="col-sm-7">
+                                        <div class="form-group{{ $errors->has('avatar') ? ' has-danger' : '' }}">
+                                            <input class="form-control{{ $errors->has('avatar') ? ' is-invalid' : '' }}" name="avatar" id="input-avatar" type="file" />
+                                            @if ($errors->has('avatar'))
+                                                <span id="avatar-error" class="error text-danger" for="input-avatar">{{ $errors->first('avatar') }}</span>
                                             @endif
                                         </div>
                                     </div>

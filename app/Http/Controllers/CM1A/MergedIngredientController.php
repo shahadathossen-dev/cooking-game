@@ -33,19 +33,19 @@ class MergedIngredientController extends Controller
         return view('cm1a.merged-ingredients.create', ['ingredients_list' => $ingredients_list]);
     }
 
-    public function unique_multidimensional_array($array, $key) { 
-        $temp_array = array(); 
-        $i = 0; 
-        $key_array = array(); 
+    public function unique_multidimensional_array($array, $key) {
+        $temp_array = array();
+        $i = 0;
+        $key_array = array();
 
-        foreach($array as $val) { 
-            if (!in_array($val[$key], $key_array)) { 
-                $key_array[$i] = $val[$key]; 
-                $temp_array[$i] = $val; 
-            } 
-            $i++; 
-        } 
-        return $temp_array; 
+        foreach($array as $val) {
+            if (!in_array($val[$key], $key_array)) {
+                $key_array[$i] = $val[$key];
+                $temp_array[$i] = $val;
+            }
+            $i++;
+        }
+        return $temp_array;
     }
 
     /**
@@ -56,8 +56,12 @@ class MergedIngredientController extends Controller
      */
     public function store(MergedIngredientRequest $request)
     {
-        $newIngredient = MergedIngredient::create($request->all());
-
+        if($request->avatar) {
+            $version = '1';
+            $fileUrl = $this->uploadFile($request);
+            $request->merge(['photo_link' => $fileUrl, 'ver' => $version]);
+        }
+        $newIngredient = MergedIngredient::create($request->except(['avatar']));
         return redirect()->route('cm1a.merged-ingredients.index')->withStatus(__('MergedIngredient created successfully.'));
     }
 
@@ -95,7 +99,13 @@ class MergedIngredientController extends Controller
      */
     public function update(MergedIngredientRequest $request, MergedIngredient $ingredient)
     {
-        $updated = $ingredient->update($request->all());
+        if($request->avatar) {
+            // $newVersion = $this->getNewVersion($ingredient->ing_photo_link);
+
+            $fileUrl = $this->uploadFile($request);
+            $request->merge(['photo_link' => $fileUrl, 'ver' => $ingredient->ver++]);
+        }
+        $updated = $ingredient->update($request->except(['avatar']));
         return redirect()->route('cm1a.merged-ingredients.index')->withStatus(__('MergedIngredient successfully updated.'));
     }
 
@@ -107,8 +117,26 @@ class MergedIngredientController extends Controller
      */
     public function destroy(MergedIngredient $ingredient)
     {
+        if(File::exists('storage/avatars/' . $ingredient->new_item)) File::deleteDirectory('storage/avatars/' . $ingredient->new_item);
         $ingredient->delete();
 
         return redirect()->route('cm1a.merged-ingredients.index')->withStatus(__('MergedIngredient successfully deleted.'));
+    }
+
+    public function uploadFile($request) {
+        $fileName = $request->file('avatar')->getClientOriginalName();
+        $uploadFile = $request->file('avatar')->move(public_path('storage/avatars/' . '/' . $request->new_item), $fileName);
+        return asset('storage/avatars/' . $request->new_item . '/' . $fileName);
+    }
+
+    public function getNewVersion($oldVersionUrl) {
+        $pathArray = explode('/', $oldVersionUrl);
+        $oldVersion = $pathArray[count($pathArray) - 2];
+        $versionSplit = explode('-', $oldVersion);
+        $versionPrefix = current($versionSplit);
+        $oldVersionNumber = end($versionSplit);
+        $oldVersionNumber = (int) $oldVersionNumber;
+        $newVersionNumber =  $oldVersionNumber++;
+        return $newVersion = $versionPrefix . '-' . $newVersionNumber;
     }
 }

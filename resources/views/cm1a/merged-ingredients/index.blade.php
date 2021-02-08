@@ -36,7 +36,7 @@
                                 <th>
                                     {{ __('Sl. No.') }}
                                 </th>
-                                
+
                                 <th>
                                     {{ __('1st Ingredient') }}
                                 </th>
@@ -48,6 +48,9 @@
                                 </th>
                                 <th>
                                     {{ __('Item Name') }}
+                                </th>
+                                <th>
+                                    {{ __('Avatar') }}
                                 </th>
                                 <th>
                                     {{ __('Creation date') }}
@@ -62,7 +65,7 @@
                                     <td>
                                         {{ $loop->index + 1 }}
                                     </td>
-                                    
+
                                     <td>
                                         {{ $ingredient->ing1 }}
                                     </td>
@@ -76,6 +79,9 @@
                                         {{ $ingredient->new_item }}
                                     </td>
                                     <td>
+                                        <img style="max-width: 100px;" src="{{ $ingredient->photo_link }}" alt="{{$ingredient->ing}} avatar">
+                                    </td>
+                                    <td>
                                         {{ $ingredient->crete_time->format('Y-m-d') }}
                                     </td>
                                     <td class="td-actions text-right">
@@ -86,7 +92,7 @@
                                                 <i class="material-icons">edit</i>
                                                 <div class="ripple-container"></div>
                                             </a>
-                                        
+
                                             <button type="submit" class="btn btn-danger btn-sm" data-original-title="" title="Delete ingredient" onclick="confirm('Are you sure you want to delete the ingredient?') ? this.parentElement.submit() : event.preventDefault()">
                                                 <i class="material-icons">close</i>
                                                 <div class="ripple-container"></div>

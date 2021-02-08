@@ -42,7 +42,12 @@ class IngredientController extends Controller
      */
     public function store(IngredientRequest $request)
     {
-        $newIngredient = Ingredient::create($request->all());
+        if($request->avatar) {
+            $version = '1';
+            $fileUrl = $this->uploadFile($request);
+            $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $version]);
+        }
+        $newIngredient = Ingredient::create($request->except(['avatar']));
 
         return redirect()->route('cm1b.ingredients.index')->withStatus(__('Ingredient created successfully.'));
     }
@@ -78,7 +83,13 @@ class IngredientController extends Controller
      */
     public function update(IngredientRequest $request, Ingredient $ingredient)
     {
-        $updated = $ingredient->update($request->all());
+        if($request->avatar) {
+            // $newVersion = $this->getNewVersion($ingredient->ing_photo_link);
+
+            $fileUrl = $this->uploadFile($request);
+            $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $ingredient->ver++]);
+        }
+        $newIngredient = $ingredient->update($request->except(['avatar']));
         return redirect()->route('cm1b.ingredients.index')->withStatus(__('Ingredient successfully updated.'));
     }
 
@@ -90,8 +101,26 @@ class IngredientController extends Controller
      */
     public function destroy(Ingredient $ingredient)
     {
+        if(File::exists('storage/avatars/' . $ingredient->ing)) File::deleteDirectory('storage/avatars/' . $ingredient->ing);
         $ingredient->delete();
 
         return redirect()->route('cm1b.ingredients.index')->withStatus(__('Ingredient successfully deleted.'));
+    }
+
+    public function uploadFile($request) {
+        $fileName = $request->file('avatar')->getClientOriginalName();
+        $uploadFile = $request->file('avatar')->move(public_path('storage/avatars/' . '/' . $request->ing), $fileName);
+        return asset('storage/avatars/' . $request->ing . '/' . $fileName);
+    }
+
+    public function getNewVersion($oldVersionUrl) {
+        $pathArray = explode('/', $oldVersionUrl);
+        $oldVersion = $pathArray[count($pathArray) - 2];
+        $versionSplit = explode('-', $oldVersion);
+        $versionPrefix = current($versionSplit);
+        $oldVersionNumber = end($versionSplit);
+        $oldVersionNumber = (int) $oldVersionNumber;
+        $newVersionNumber =  $oldVersionNumber++;
+        return $newVersion = $versionPrefix . '-' . $newVersionNumber;
     }
 }
