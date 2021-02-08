@@ -88,7 +88,7 @@
                                                 {{ $attribute->friction }}
                                             </td>
                                             <th>
-                                                {{ __('Base Score') }}
+                                                {{ __('Play Time') }}
                                             </th>
                                             <td>
                                                 {{ $attribute->base_score }}
@@ -96,7 +96,7 @@
                                         </tr>
                                         <tr>
                                             <th>
-                                                {{ __('Min Score') }}
+                                                {{ __('Add Time Per Chop') }}
                                             </th>
                                             <td>
                                                 {{ $attribute->min_score }}

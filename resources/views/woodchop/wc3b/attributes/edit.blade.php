@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Base Score') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Play Time') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('base_score') ? ' has-danger' : '' }}">
                                         <input class="form-control{{ $errors->has('base_score') ? ' is-invalid' : '' }}" value="{{$attribute->base_score}}" name="base_score" id="input-base_score" type="number" placeholder="{{ __('10') }}" required />
@@ -101,7 +101,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Min Score') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Add Time Per Chop') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('min_score') ? ' has-danger' : '' }}">
                                         <input class="form-control{{ $errors->has('min_score') ? ' is-invalid' : '' }}" value="{{$attribute->min_score}}" name="min_score" id="input-min_score" type="number" placeholder="{{ __('10') }}" required />
