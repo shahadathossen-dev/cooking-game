@@ -105,7 +105,7 @@ class MergedIngredientController extends Controller
             // $newVersion = $this->getNewVersion($ingredient->ing_photo_link);
 
             $fileUrl = $this->uploadFile($request);
-            $request->merge(['photo_link' => $fileUrl, 'ver' => $ingredient->ver++]);
+            $request->merge(['photo_link' => $fileUrl, 'ver' => $ingredient->ver + 1]);
         }
         $updated = $ingredient->update($request->except(['avatar']));
         return redirect()->route('cm2a.merged-ingredients.index')->withStatus(__('MergedIngredient successfully updated.'));

@@ -88,7 +88,7 @@ class IngredientController extends Controller
             // $newVersion = $this->getNewVersion($ingredient->ing_photo_link);
 
             $fileUrl = $this->uploadFile($request);
-            $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $ingredient->ver++]);
+            $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $ingredient->ver + 1]);
         }
         $newIngredient = $ingredient->update($request->except(['avatar']));
         return redirect()->route('cm1a.ingredients.index')->withStatus(__('Ingredient successfully updated.'));
