@@ -11,7 +11,7 @@
 
 <v-container>
     <v-row class="justify-content-center">
-        <v-col md="10" sm="12">
+        <v-col md="12" sm="12">
             <v-card>
                 <div class="card-header card-header-primary content-header">
                     <h4 class="card-title">{{ __('Merged Ingredients') }}</h4>

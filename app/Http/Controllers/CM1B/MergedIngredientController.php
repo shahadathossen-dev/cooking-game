@@ -5,6 +5,7 @@ namespace App\Http\Controllers\CM1B;
 use Illuminate\Http\Request;
 use App\Models\CM1B\Ingredient;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use App\Models\CM1B\MergedIngredient;
 use App\Http\Requests\CM1B\MergedIngredientRequest;
 

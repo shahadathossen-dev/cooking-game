@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CM1B;
 
 use Illuminate\Http\Request;
 use App\Models\CM1B\Ingredient;
+use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CM1B\IngredientRequest;
 

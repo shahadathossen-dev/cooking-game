@@ -5,6 +5,7 @@ namespace App\Http\Controllers\CM2A;
 use Illuminate\Http\Request;
 use App\Models\CM2A\Ingredient;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\CM2A\IngredientRequest;
 
 class IngredientController extends Controller
