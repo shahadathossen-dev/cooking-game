@@ -236,4 +236,39 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('woodchop/wc3b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'update'])->name('woodchop.wc3b.attributes.update');
     Route::post('woodchop/wc3b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3B\AttributeController::class, 'destroy'])->name('woodchop.wc3b.attributes.destroy');
 
+    // CM1A ROUTES
+        // MAPS ROUTES
+    Route::get('v1is/islands', [App\Http\Controllers\V1IS\IslandController::class, 'index'])->name('v1is.islands.index');
+    Route::get('v1is/islands/create', [App\Http\Controllers\V1IS\IslandController::class, 'create'])->name('v1is.islands.create');
+    Route::post('v1is/islands', [App\Http\Controllers\V1IS\IslandController::class, 'store'])->name('v1is.islands.store');
+    Route::get('v1is/islands/{island}/edit', [App\Http\Controllers\V1IS\IslandController::class, 'edit'])->name('v1is.islands.edit');
+    Route::put('v1is/islands/{island}', [App\Http\Controllers\V1IS\IslandController::class, 'update'])->name('v1is.islands.update');
+    Route::post('v1is/islands/{island}', [App\Http\Controllers\V1IS\IslandController::class, 'destroy'])->name('v1is.islands.destroy');
+
+    Route::get('v1is/islands/list', [App\Http\Controllers\V1IS\IslandController::class, 'list'])->name('v1is.islands.list');
+
+        // MAPS SHAPES ROUTES
+    Route::get('v1is/island-shapes', [App\Http\Controllers\V1IS\IslandShapeController::class, 'index'])->name('v1is.island-shapes.index');
+    Route::get('v1is/island-shapes/create', [App\Http\Controllers\V1IS\IslandShapeController::class, 'create'])->name('v1is.island-shapes.create');
+    Route::post('v1is/island-shapes', [App\Http\Controllers\V1IS\IslandShapeController::class, 'store'])->name('v1is.island-shapes.store');
+    Route::get('v1is/island-shapes/{islandShape}/edit', [App\Http\Controllers\V1IS\IslandShapeController::class, 'edit'])->name('v1is.island-shapes.edit');
+    Route::put('v1is/island-shapes/{islandShape}', [App\Http\Controllers\V1IS\IslandShapeController::class, 'update'])->name('v1is.island-shapes.update');
+    Route::post('v1is/island-shapes/{islandShape}', [App\Http\Controllers\V1IS\IslandShapeController::class, 'destroy'])->name('v1is.island-shapes.destroy');
+
+        // MAPS SIZES ROUTES
+    Route::get('v1is/island-sizes', [App\Http\Controllers\V1IS\IslandSizeController::class, 'index'])->name('v1is.island-sizes.index');
+    Route::get('v1is/island-sizes/create', [App\Http\Controllers\V1IS\IslandSizeController::class, 'create'])->name('v1is.island-sizes.create');
+    Route::post('v1is/island-sizes', [App\Http\Controllers\V1IS\IslandSizeController::class, 'store'])->name('v1is.island-sizes.store');
+    Route::get('v1is/island-sizes/{islandSize}/edit', [App\Http\Controllers\V1IS\IslandSizeController::class, 'edit'])->name('v1is.island-sizes.edit');
+    Route::put('v1is/island-sizes/{islandSize}', [App\Http\Controllers\V1IS\IslandSizeController::class, 'update'])->name('v1is.island-sizes.update');
+    Route::post('v1is/island-sizes/{islandSize}', [App\Http\Controllers\V1IS\IslandSizeController::class, 'destroy'])->name('v1is.island-sizes.destroy');
+
+        // MAPS ATTRIBUTES ROUTES
+    Route::get('v1is/island-attributes', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'index'])->name('v1is.island-attributes.index');
+    Route::get('v1is/island-attributes/create', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'create'])->name('v1is.island-attributes.create');
+    Route::post('v1is/island-attributes', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'store'])->name('v1is.island-attributes.store');
+    Route::get('v1is/island-attributes/{attribute}/edit', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'edit'])->name('v1is.island-attributes.edit');
+    Route::put('v1is/island-attributes/{attribute}', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'update'])->name('v1is.island-attributes.update');
+    Route::post('v1is/island-attributes/{attribute}', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'destroy'])->name('v1is.island-attributes.destroy');
+
 });
