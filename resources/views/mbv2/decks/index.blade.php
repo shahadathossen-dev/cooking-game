@@ -14,7 +14,7 @@
         <v-col md="10" sm="12">
             <v-card>
                 <div class="card-header card-header-primary content-header">
-                    <h4 class="card-title">{{ __('Islands') }}</h4>
+                    <h4 class="card-title">{{ __('Decks') }}</h4>
                     <a href="{{ route('mbv2.decks.create') }}" class="btn btn-sm btn-primary text-white">{{ __('Add Deck') }}</a>
                 </div>
                 <div class="card-body">
