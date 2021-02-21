@@ -434,6 +434,59 @@
                                 </a>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>MBV1</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <a href="{{route('mbv1.decks.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Decks' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('mbv1.deck-attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>MBV2</v-expansion-panel-header>
+                                <a href="{{route('mbv2.decks.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Decks' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('mbv2.deck-attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
                     </v-expansion-panels>
 
                     @endif

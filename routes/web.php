@@ -271,4 +271,38 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('v1is/island-attributes/{attribute}', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'update'])->name('v1is.island-attributes.update');
     Route::post('v1is/island-attributes/{attribute}', [App\Http\Controllers\V1IS\IslandAttributeController::class, 'destroy'])->name('v1is.island-attributes.destroy');
 
+    // MBV1 ROUTES
+        // MINION BATTLE DECK ROUTES
+    Route::get('mbv1/decks', [App\Http\Controllers\MBV1\DeckController::class, 'index'])->name('mbv1.decks.index');
+    Route::get('mbv1/decks/create', [App\Http\Controllers\MBV1\DeckController::class, 'create'])->name('mbv1.decks.create');
+    Route::post('mbv1/decks', [App\Http\Controllers\MBV1\DeckController::class, 'store'])->name('mbv1.decks.store');
+    Route::get('mbv1/decks/{deck}/edit', [App\Http\Controllers\MBV1\DeckController::class, 'edit'])->name('mbv1.decks.edit');
+    Route::put('mbv1/decks/{deck}', [App\Http\Controllers\MBV1\DeckController::class, 'update'])->name('mbv1.decks.update');
+    Route::post('mbv1/decks/{deck}', [App\Http\Controllers\MBV1\DeckController::class, 'destroy'])->name('mbv1.decks.destroy');
+
+        // MINION BATTLE CONFIG ROUTES
+    Route::get('mbv1/deck-attributes', [App\Http\Controllers\MBV1\AttributeController::class, 'index'])->name('mbv1.deck-attributes.index');
+    Route::get('mbv1/deck-attributes/create', [App\Http\Controllers\MBV1\AttributeController::class, 'create'])->name('mbv1.deck-attributes.create');
+    Route::post('mbv1/deck-attributes', [App\Http\Controllers\MBV1\AttributeController::class, 'store'])->name('mbv1.deck-attributes.store');
+    Route::get('mbv1/deck-attributes/{attribute}/edit', [App\Http\Controllers\MBV1\AttributeController::class, 'edit'])->name('mbv1.deck-attributes.edit');
+    Route::put('mbv1/deck-attributes/{attribute}', [App\Http\Controllers\MBV1\AttributeController::class, 'update'])->name('mbv1.deck-attributes.update');
+    Route::post('mbv1/deck-attributes/{attribute}', [App\Http\Controllers\MBV1\AttributeController::class, 'destroy'])->name('mbv1.deck-attributes.destroy');
+
+    // MBV2 ROUTES
+        // MINION BATTLE DECK ROUTES
+    Route::get('mbv2/decks', [App\Http\Controllers\MBV2\DeckController::class, 'index'])->name('mbv2.decks.index');
+    Route::get('mbv2/decks/create', [App\Http\Controllers\MBV2\DeckController::class, 'create'])->name('mbv2.decks.create');
+    Route::post('mbv2/decks', [App\Http\Controllers\MBV2\DeckController::class, 'store'])->name('mbv2.decks.store');
+    Route::get('mbv2/decks/{deck}/edit', [App\Http\Controllers\MBV2\DeckController::class, 'edit'])->name('mbv2.decks.edit');
+    Route::put('mbv2/decks/{deck}', [App\Http\Controllers\MBV2\DeckController::class, 'update'])->name('mbv2.decks.update');
+    Route::post('mbv2/decks/{deck}', [App\Http\Controllers\MBV2\DeckController::class, 'destroy'])->name('mbv2.decks.destroy');
+
+        // MINION BATTLE CONFIG ROUTES
+    Route::get('mbv2/deck-attributes', [App\Http\Controllers\MBV2\AttributeController::class, 'index'])->name('mbv2.deck-attributes.index');
+    Route::get('mbv2/deck-attributes/create', [App\Http\Controllers\MBV2\AttributeController::class, 'create'])->name('mbv2.deck-attributes.create');
+    Route::post('mbv2/deck-attributes', [App\Http\Controllers\MBV2\AttributeController::class, 'store'])->name('mbv2.deck-attributes.store');
+    Route::get('mbv2/deck-attributes/{attribute}/edit', [App\Http\Controllers\MBV2\AttributeController::class, 'edit'])->name('mbv2.deck-attributes.edit');
+    Route::put('mbv2/deck-attributes/{attribute}', [App\Http\Controllers\MBV2\AttributeController::class, 'update'])->name('mbv2.deck-attributes.update');
+    Route::post('mbv2/deck-attributes/{attribute}', [App\Http\Controllers\MBV2\AttributeController::class, 'destroy'])->name('mbv2.deck-attributes.destroy');
+
 });
