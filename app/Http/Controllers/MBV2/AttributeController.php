@@ -16,7 +16,7 @@ class AttributeController extends Controller
      */
     public function index(Attribute $attribute)
     {
-        return view('mbv1.deck-attributes.index', ['attribute' => $attribute->first()]);
+        return view('mbv2.deck-attributes.index', ['attribute' => $attribute->first()]);
     }
 
     /**
@@ -26,7 +26,7 @@ class AttributeController extends Controller
      */
     public function create()
     {
-        return view('mbv1.deck-attributes.create');
+        return view('mbv2.deck-attributes.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class AttributeController extends Controller
     {
         $newAttribute = Attribute::create($request->all());
 
-        return redirect()->route('mbv1.deck-attributes.index')->withStatus(__('Attribute created successfully.'));
+        return redirect()->route('mbv2.deck-attributes.index')->withStatus(__('Attribute created successfully.'));
     }
 
     /**
@@ -50,7 +50,7 @@ class AttributeController extends Controller
      */
     public function show(Attribute $attribute)
     {
-        return view('mbv1.deck-attributes.show', compact('attribute'));
+        return view('mbv2.deck-attributes.show', compact('attribute'));
     }
 
     /**
@@ -61,7 +61,7 @@ class AttributeController extends Controller
      */
     public function edit(Attribute $attribute)
     {
-        return view('mbv1.deck-attributes.edit', compact('attribute'));
+        return view('mbv2.deck-attributes.edit', compact('attribute'));
     }
 
     /**
@@ -74,7 +74,7 @@ class AttributeController extends Controller
     public function update(AttributeRequest $request, Attribute $attribute)
     {
         $updated = $attribute->update($request->all());
-        return redirect()->route('mbv1.deck-attributes.index')->withStatus(__('Attribute successfully updated.'));
+        return redirect()->route('mbv2.deck-attributes.index')->withStatus(__('Attribute successfully updated.'));
     }
 
     /**
@@ -87,6 +87,6 @@ class AttributeController extends Controller
     {
         $attribute->delete();
 
-        return redirect()->route('mbv1.deck-attributes.index')->withStatus(__('Attribute successfully deleted.'));
+        return redirect()->route('mbv2.deck-attributes.index')->withStatus(__('Attribute successfully deleted.'));
     }
 }
