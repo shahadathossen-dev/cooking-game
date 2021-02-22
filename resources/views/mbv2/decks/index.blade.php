@@ -98,7 +98,7 @@
                                         {{ $deck->create_time->format('Y-m-d') }}
                                     </td>
                                     <td class="td-actions text-right">
-                                    <form action="{{ route('mbv2.decks.destroy', $deck) }}" method="post">
+                                        <form action="{{ route('mbv2.decks.destroy', $deck) }}" method="post">
                                             @csrf
 
                                             <a rel="tooltip" class="btn btn-success btn-sm" href="{{ route('mbv2.decks.edit', $deck) }}" data-original-title="" title="">

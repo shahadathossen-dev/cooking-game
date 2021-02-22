@@ -42,7 +42,15 @@
                                 <label class="col-sm-2 col-form-label">{{ __('Deck Type') }}</label>
                                 <div class="col-sm-7">
                                     <div class="form-group{{ $errors->has('deck_type') ? ' has-danger' : '' }}">
-                                        <input class="form-control{{ $errors->has('deck_type') ? ' is-invalid' : '' }}" name="deck_type" id="input-deck_type" type="text" placeholder="{{ __('Deck Type') }}" value="{{ $deck->deck_type }}" required="true" aria-required="true"/>
+                                        <select class="form-control{{ $errors->has('deck_type') ? ' is-invalid' : '' }}" name="deck_type" id="input-deck_type" required="true" aria-required="true">
+                                            <option value="" disabled>Select Deck Type</option>
+                                            <option value="Minion" @if ($deck->deck_type === 'Minion')
+                                                selected
+                                            @endif>Minion</option>
+                                            <option value="Effect" @if ($deck->deck_type === 'Effect')
+                                                selected
+                                            @endif>Effect</option>
+                                        </select>
                                         @if ($errors->has('deck_type'))
                                             <span id="deck_type-error" class="error text-danger" for="input-deck_type">{{ $errors->first('deck_type') }}</span>
                                         @endif
