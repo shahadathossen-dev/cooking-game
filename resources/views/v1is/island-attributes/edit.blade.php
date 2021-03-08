@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Timer') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Camera Distance') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('timer') ? ' has-danger' : '' }}">
                                         <input class="form-control{{ $errors->has('timer') ? ' is-invalid' : '' }}" value="{{$attribute->timer}}" name="timer" id="input-timer" type="number"  min="1" step="0.01" placeholder="{{ __('10') }}" />

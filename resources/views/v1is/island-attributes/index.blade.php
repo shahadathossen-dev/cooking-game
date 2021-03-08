@@ -71,7 +71,7 @@
                                     <tbody>
                                         <tr>
                                             <th>
-                                                {{ __('Timer') }}
+                                                {{ __('Camera Distance') }}
                                             </th>
                                             <td>
                                                 {{ $attribute->timer }}
