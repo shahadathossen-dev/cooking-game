@@ -4,7 +4,7 @@ namespace App\Http\Requests\WoodChop\WC3A;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AttributeRequest extends FormRequest
+class ShopRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,19 +24,15 @@ class AttributeRequest extends FormRequest
     public function rules()
     {
         return [
-            'branch_freq' => ['required', 'numeric'],
-            'cat_freq' => ['required', 'numeric'],
-            'cat_weight' => ['required', 'numeric'],
-            'gravity' => ['required', 'numeric'],
-            'friction' => ['required', 'numeric'],
-            'base_score' => ['required', 'numeric'],
-            'min_score' => ['required', 'numeric'],
+            'shop_name' => ['required', 'string'],
             'wood_score' => ['required', 'numeric'],
             'cat_score' => ['required', 'numeric'],
             'wood_currency' => ['required', 'numeric'],
             'cat_currency' => ['required', 'numeric'],
-            'game_play_time' => ['required', 'numeric'],
-            'record_time' => ['required', 'numeric'],
+            'physics_val' => ['required', 'numeric'],
+            'wood_cost' => ['required', 'numeric'],
+            'cat_cost' => ['required', 'numeric'],
+            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }

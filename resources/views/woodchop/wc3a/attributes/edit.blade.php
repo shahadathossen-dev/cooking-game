@@ -97,6 +97,90 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6 py-0">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label">{{ __('Wood Score') }}</label>
+                                <div class="col-md-8">
+                                    <div class="form-group{{ $errors->has('wood_score') ? ' has-danger' : '' }}">
+                                        <input class="form-control{{ $errors->has('wood_score') ? ' is-invalid' : '' }}" value="{{$attribute->wood_score}}" name="wood_score" id="input-wood_score" type="number" placeholder="{{ __('1.00') }}" min="0.01" step="0.01" required />
+                                        @if ($errors->has('wood_score'))
+                                            <span id="wood_score-error" class="error text-danger" for="input-wood_score">{{ $errors->first('wood_score') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-0">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label">{{ __('Cat Score') }}</label>
+                                <div class="col-md-8">
+                                    <div class="form-group{{ $errors->has('cat_score') ? ' has-danger' : '' }}">
+                                        <input class="form-control{{ $errors->has('cat_score') ? ' is-invalid' : '' }}" value="{{$attribute->cat_score}}" name="cat_score" id="input-cat_score" type="number" placeholder="{{ __('10') }}" required />
+                                        @if ($errors->has('cat_score'))
+                                            <span id="cat_score-error" class="error text-danger" for="input-cat_score">{{ $errors->first('cat_score') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 py-0">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label">{{ __('Wood Currency') }}</label>
+                                <div class="col-md-8">
+                                    <div class="form-group{{ $errors->has('wood_currency') ? ' has-danger' : '' }}">
+                                        <input class="form-control{{ $errors->has('wood_currency') ? ' is-invalid' : '' }}" value="{{$attribute->wood_currency}}" name="wood_currency" id="input-wood_currency" type="number" placeholder="{{ __('1.00') }}" min="0.01" step="0.01" required />
+                                        @if ($errors->has('wood_currency'))
+                                            <span id="wood_currency-error" class="error text-danger" for="input-wood_currency">{{ $errors->first('wood_currency') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-0">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label">{{ __('Cat Currency') }}</label>
+                                <div class="col-md-8">
+                                    <div class="form-group{{ $errors->has('cat_currency') ? ' has-danger' : '' }}">
+                                        <input class="form-control{{ $errors->has('cat_currency') ? ' is-invalid' : '' }}" value="{{$attribute->cat_currency}}" name="cat_currency" id="input-cat_currency" type="number" placeholder="{{ __('10') }}" required />
+                                        @if ($errors->has('cat_currency'))
+                                            <span id="cat_currency-error" class="error text-danger" for="input-cat_currency">{{ $errors->first('cat_currency') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 py-0">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label">{{ __('Gameplay Time') }}</label>
+                                <div class="col-md-8">
+                                    <div class="form-group{{ $errors->has('game_play_time') ? ' has-danger' : '' }}">
+                                        <input class="form-control{{ $errors->has('game_play_time') ? ' is-invalid' : '' }}" value="{{$attribute->game_play_time}}" name="game_play_time" id="input-game_play_time" type="number" placeholder="{{ __('1.00') }}" min="0.01" step="0.01" required />
+                                        @if ($errors->has('game_play_time'))
+                                            <span id="game_play_time-error" class="error text-danger" for="input-game_play_time">{{ $errors->first('game_play_time') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-0">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label">{{ __('Record Time') }}</label>
+                                <div class="col-md-8">
+                                    <div class="form-group{{ $errors->has('record_time') ? ' has-danger' : '' }}">
+                                        <input class="form-control{{ $errors->has('record_time') ? ' is-invalid' : '' }}" value="{{$attribute->record_time}}" name="record_time" id="input-record_time" type="number" placeholder="{{ __('10') }}" required />
+                                        @if ($errors->has('record_time'))
+                                            <span id="record_time-error" class="error text-danger" for="input-record_time">{{ $errors->first('record_time') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row justify-content-center">
                         <div class="col-md-6 py-0">

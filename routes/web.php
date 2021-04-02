@@ -218,7 +218,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('woodchop/wc2b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'update'])->name('woodchop.wc2b.attributes.update');
     Route::post('woodchop/wc2b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'destroy'])->name('woodchop.wc2b.attributes.destroy');
 
-    // CM3A ROUTES
+    // WC3A ROUTES
         // Settings ROUTES
     Route::get('woodchop/wc3a/attributes', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'index'])->name('woodchop.wc3a.attributes.index');
     Route::get('woodchop/wc3a/attributes/create', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'create'])->name('woodchop.wc3a.attributes.create');
@@ -226,6 +226,22 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('woodchop/wc3a/attributes/{attribute}/edit', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'edit'])->name('woodchop.wc3a.attributes.edit');
     Route::put('woodchop/wc3a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'update'])->name('woodchop.wc3a.attributes.update');
     Route::post('woodchop/wc3a/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'destroy'])->name('woodchop.wc3a.attributes.destroy');
+
+        // Shop ROUTES
+    Route::get('woodchop/wc3a/shops', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'index'])->name('woodchop.wc3a.shops.index');
+    Route::get('woodchop/wc3a/shops/create', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'create'])->name('woodchop.wc3a.shops.create');
+    Route::post('woodchop/wc3a/shops', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'store'])->name('woodchop.wc3a.shops.store');
+    Route::get('woodchop/wc3a/shops/{shop}/edit', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'edit'])->name('woodchop.wc3a.shops.edit');
+    Route::put('woodchop/wc3a/shops/{shop}', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'update'])->name('woodchop.wc3a.shops.update');
+    Route::post('woodchop/wc3a/shops/{shop}', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'destroy'])->name('woodchop.wc3a.shops.destroy');
+
+    // Grade ROUTES
+    Route::get('woodchop/wc3a/grades', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'index'])->name('woodchop.wc3a.grades.index');
+    Route::get('woodchop/wc3a/grades/create', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'create'])->name('woodchop.wc3a.grades.create');
+    Route::post('woodchop/wc3a/grades', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'store'])->name('woodchop.wc3a.grades.store');
+    Route::get('woodchop/wc3a/grades/{grade}/edit', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'edit'])->name('woodchop.wc3a.grades.edit');
+    Route::put('woodchop/wc3a/grades/{grade}', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'update'])->name('woodchop.wc3a.grades.update');
+    Route::post('woodchop/wc3a/grades/{grade}', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'destroy'])->name('woodchop.wc3a.grades.destroy');
 
     // CM3B ROUTES
         // Settings ROUTES

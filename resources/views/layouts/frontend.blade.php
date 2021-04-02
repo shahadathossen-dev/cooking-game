@@ -324,6 +324,29 @@
                         <v-expansion-panel>
                             <v-expansion-panel-header>WC3A</v-expansion-panel-header>
                             <v-expansion-panel-content>
+
+                                <a href="{{route('woodchop.wc3a.shops.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Shops' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('woodchop.wc3a.grades.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Grades' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
                                 <a href="{{route('woodchop.wc3a.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
@@ -335,6 +358,7 @@
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
+
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                         <v-expansion-panel>
