@@ -62,6 +62,7 @@
                                     {{ __('Cat. Cost') }}
                                 </th>
                                 <th>{{ __('Avatar') }}</th>
+
                                 <th>{{ __('Ver') }}</th>
                                 <th>
                                     {{ __('Actions') }}
@@ -89,13 +90,13 @@
                                         {{ $shop->cat_currency }}
                                     </td>
                                     <td>
+                                        {{ $shop->physics_val }}
+                                    </td>
+                                    <td>
                                         {{ $shop->wood_cost }}
                                     </td>
                                     <td>
                                         {{ $shop->cat_cost }}
-                                    </td>
-                                    <td>
-                                        {{ $shop->physics_val }}
                                     </td>
                                     <td>
                                         <img style="max-width: 100px;" src="{{ $shop->img_link }}" alt="{{$shop->ing}} avatar">
