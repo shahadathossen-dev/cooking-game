@@ -188,7 +188,7 @@
                                 <label class="col-md-4 col-form-label">{{ __('Chop Interval') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('min_score') ? ' has-danger' : '' }}">
-                                        <input class="form-control{{ $errors->has('min_score') ? ' is-invalid' : '' }}" value="{{$attribute->min_score}}" name="min_score" id="input-min_score" type="number" placeholder="{{ __('10') }}" required />
+                                        <input class="form-control{{ $errors->has('min_score') ? ' is-invalid' : '' }}" value="{{$attribute->min_score}}" name="min_score" id="input-min_score" type="number" step="0.1" placeholder="{{ __('10') }}" required />
                                         @if ($errors->has('min_score'))
                                             <span id="min_score-error" class="error text-danger" for="input-min_score">{{ $errors->first('min_score') }}</span>
                                         @endif
