@@ -98,7 +98,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        {{ __('Min Score') }}
+                                                        {{ __('Chop Interval') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->min_score }}
