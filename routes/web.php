@@ -182,6 +182,50 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('cm2b/attributes/{attribute}', [App\Http\Controllers\CM2B\AttributeController::class, 'update'])->name('cm2b.attributes.update');
     Route::post('cm2b/attributes/{attribute}', [App\Http\Controllers\CM2B\AttributeController::class, 'destroy'])->name('cm2b.attributes.destroy');
 
+    // CM3 ROUTES
+    // PLATES ROUTES
+    Route::get('cm3/plates', [App\Http\Controllers\CM3\PlateController::class, 'index'])->name('cm3.plates.index');
+    Route::get('cm3/plates/create', [App\Http\Controllers\CM3\PlateController::class, 'create'])->name('cm3.plates.create');
+    Route::post('cm3/plates', [App\Http\Controllers\CM3\PlateController::class, 'store'])->name('cm3.plates.store');
+    Route::get('cm3/plates/{plate}/edit', [App\Http\Controllers\CM3\PlateController::class, 'edit'])->name('cm3.plates.edit');
+    Route::put('cm3/plates/{plate}', [App\Http\Controllers\CM3\PlateController::class, 'update'])->name('cm3.plates.update');
+    Route::post('cm3/plates/{plate}', [App\Http\Controllers\CM3\PlateController::class, 'destroy'])->name('cm3.plates.destroy');
+
+    Route::get('cm3/plates/list', [App\Http\Controllers\CM3\PlateController::class, 'list'])->name('cm3.plates.list');
+
+
+        // MERGED INGREDIENTS ROUTES
+    Route::get('cm3/plate-combs', [App\Http\Controllers\CM3\PlateCombController::class, 'index'])->name('cm3.plate-combs.index');
+    Route::get('cm3/plate-combs/create', [App\Http\Controllers\CM3\PlateCombController::class, 'create'])->name('cm3.plate-combs.create');
+    Route::post('cm3/plate-combs', [App\Http\Controllers\CM3\PlateCombController::class, 'store'])->name('cm3.plate-combs.store');
+    Route::get('cm3/plate-combs/{plate_comb}/edit', [App\Http\Controllers\CM3\PlateCombController::class, 'edit'])->name('cm3.plate-combs.edit');
+    Route::put('cm3/plate-combs/{plate_comb}', [App\Http\Controllers\CM3\PlateCombController::class, 'update'])->name('cm3.plate-combs.update');
+    Route::post('cm3/plate-combs/{plate_comb}', [App\Http\Controllers\CM3\PlateCombController::class, 'destroy'])->name('cm3.plate-combs.destroy');
+
+        // INGREDIENTS PRIORITY ROUTES
+    Route::get('cm3/food-items', [App\Http\Controllers\CM3\FoodItemController::class, 'index'])->name('cm3.food-items.index');
+    Route::get('cm3/food-items/create', [App\Http\Controllers\CM3\FoodItemController::class, 'create'])->name('cm3.food-items.create');
+    Route::post('cm3/food-items', [App\Http\Controllers\CM3\FoodItemController::class, 'store'])->name('cm3.food-items.store');
+    Route::get('cm3/food-items/{food_item}/edit', [App\Http\Controllers\CM3\FoodItemController::class, 'edit'])->name('cm3.food-items.edit');
+    Route::put('cm3/food-items/{food_item}', [App\Http\Controllers\CM3\FoodItemController::class, 'update'])->name('cm3.food-items.update');
+    Route::post('cm3/food-items/{food_item}', [App\Http\Controllers\CM3\FoodItemController::class, 'destroy'])->name('cm3.food-items.destroy');
+
+        // INGREDIENTS PRIORITY ROUTES
+    Route::get('cm3/levels', [App\Http\Controllers\CM3\LevelController::class, 'index'])->name('cm3.levels.index');
+    Route::get('cm3/levels/create', [App\Http\Controllers\CM3\LevelController::class, 'create'])->name('cm3.levels.create');
+    Route::post('cm3/levels', [App\Http\Controllers\CM3\LevelController::class, 'store'])->name('cm3.levels.store');
+    Route::get('cm3/levels/{level}/edit', [App\Http\Controllers\CM3\LevelController::class, 'edit'])->name('cm3.levels.edit');
+    Route::put('cm3/levels/{level}', [App\Http\Controllers\CM3\LevelController::class, 'update'])->name('cm3.levels.update');
+    Route::post('cm3/levels/{level}', [App\Http\Controllers\CM3\LevelController::class, 'destroy'])->name('cm3.levels.destroy');
+
+        // Settings ROUTES
+    Route::get('cm3/attributes', [App\Http\Controllers\CM3\AttributeController::class, 'index'])->name('cm3.attributes.index');
+    Route::get('cm3/attributes/create', [App\Http\Controllers\CM3\AttributeController::class, 'create'])->name('cm3.attributes.create');
+    Route::post('cm3/attributes', [App\Http\Controllers\CM3\AttributeController::class, 'store'])->name('cm3.attributes.store');
+    Route::get('cm3/attributes/{attribute}/edit', [App\Http\Controllers\CM3\AttributeController::class, 'edit'])->name('cm3.attributes.edit');
+    Route::put('cm3/attributes/{attribute}', [App\Http\Controllers\CM3\AttributeController::class, 'update'])->name('cm3.attributes.update');
+    Route::post('cm3/attributes/{attribute}', [App\Http\Controllers\CM3\AttributeController::class, 'destroy'])->name('cm3.attributes.destroy');
+
     // WoodChop CM1A ROUTES
         // Settings ROUTES
     Route::get('woodchop/wc1a/attributes', [App\Http\Controllers\WoodChop\WC1A\AttributeController::class, 'index'])->name('woodchop.wc1a.attributes.index');

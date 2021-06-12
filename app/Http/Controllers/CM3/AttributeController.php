@@ -1,28 +1,28 @@
 <?php
 
-namespace App\Http\Controllers\CM2B;
+namespace App\Http\Controllers\CM3;
 
 use Illuminate\Http\Request;
-use App\Models\CM2B\Ingredient;
+use App\Models\CM3\Attribute;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
-use App\Http\Requests\CM2B\IngredientRequest;
+use App\Http\Requests\CM3\AttributeRequest;
 
-class IngredientController extends Controller
+class AttributeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Ingredient $ingredient)
+    public function index(Attribute $attribute)
     {
-        return view('cm2b.ingredients.index', ['ingredients' => $ingredient->all()]);
+        return view('cm3.attributes.index', ['attributes' => $attribute->all()]);
     }
 
-    public function list(Ingredient $ingredient)
+    public function list(Attribute $attribute)
     {
-        return $ingredient->all();
+        return $attribute->all();
     }
 
     /**
@@ -32,7 +32,7 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        return view('cm2b.ingredients.create');
+        return view('cm3.attributes.create');
     }
 
     /**
@@ -41,76 +41,76 @@ class IngredientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(IngredientRequest $request)
+    public function store(AttributeRequest $request)
     {
         if($request->avatar) {
             $version = '1';
             $fileUrl = $this->uploadFile($request);
             $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $version]);
         }
-        $newIngredient = Ingredient::create($request->except(['avatar']));
+        $newLevel = Attribute::create($request->except(['avatar']));
 
-        return redirect()->route('cm2b.ingredients.index')->withStatus(__('Ingredient created successfully.'));
+        return redirect()->route('cm3.attributes.index')->withStatus(__('Attribute created successfully.'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CM2B\Ingredient  $ingredient
+     * @param  \App\Models\CM3\Attribute  $attribute
      * @return \Illuminate\Http\Response
      */
-    public function show(Ingredient $ingredient)
+    public function show(Attribute $attribute)
     {
-        return view('cm2b.ingredients.show', compact('ingredient'));
+        return view('cm3.attributes.show', compact('attribute'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CM2B\Ingredient  $ingredient
+     * @param  \App\Models\CM3\Attribute  $attribute
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ingredient $ingredient)
+    public function edit(Attribute $attribute)
     {
-        return view('cm2b.ingredients.edit', compact('ingredient'));
+        return view('cm3.attributes.edit', compact('attribute'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\CM2B\Ingredient  $ingredient
+     * @param  \App\Models\CM3\Attribute  $attribute
      * @return \Illuminate\Http\Response
      */
-    public function update(IngredientRequest $request, Ingredient $ingredient)
+    public function update(AttributeRequest $request, Attribute $attribute)
     {
         if($request->avatar) {
-            // $newVersion = $this->getNewVersion($ingredient->ing_photo_link);
+            // $newVersion = $this->getNewVersion($attribute->ing_photo_link);
 
             $fileUrl = $this->uploadFile($request);
-            $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $ingredient->ver + 1]);
+            $request->merge(['ing_photo_link' => $fileUrl, 'ver' => $attribute->ver + 1]);
         }
-        $newIngredient = $ingredient->update($request->except(['avatar']));
-        return redirect()->route('cm2b.ingredients.index')->withStatus(__('Ingredient successfully updated.'));
+        $newLevel = $attribute->update($request->except(['avatar']));
+        return redirect()->route('cm3.attributes.index')->withStatus(__('Attribute successfully updated.'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CM2B\Ingredient  $ingredient
+     * @param  \App\Models\CM3\Attribute  $attribute
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ingredient $ingredient)
+    public function destroy(Attribute $attribute)
     {
-        if(File::exists('storage/avatars/' . $ingredient->ing)) File::deleteDirectory('storage/avatars/' . $ingredient->ing);
-        $ingredient->delete();
+        if(File::exists('storage/avatars/' . $attribute->ing)) File::deleteDirectory('storage/avatars/' . $attribute->ing);
+        $attribute->delete();
 
-        return redirect()->route('cm2b.ingredients.index')->withStatus(__('Ingredient successfully deleted.'));
+        return redirect()->route('cm3.attributes.index')->withStatus(__('Attribute successfully deleted.'));
     }
 
     public function uploadFile($request) {
         $fileName = $request->file('avatar')->getClientOriginalName();
-        $uploadFile = $request->file('avatar')->move(public_path('storage/avatars/' . $request->ing), $fileName);
+        $uploadFile = $request->file('avatar')->move(public_path('storage/avatars/' . '/' . $request->ing), $fileName);
         return asset('storage/avatars/' . $request->ing . '/' . $fileName);
     }
 
