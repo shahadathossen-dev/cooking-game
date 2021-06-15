@@ -52,7 +52,7 @@
                                 <label class="col-sm-2 col-form-label">{{ __('Rarity') }}</label>
                                 <div class="col-sm-7">
                                     <div class="form-group{{ $errors->has('food_rarity') ? ' has-danger' : '' }}">
-                                        <input class="form-control{{ $errors->has('food_rarity') ? ' is-invalid' : '' }}" name="food_rarity" id="input-food_rarity" type="number" value="{{ $food_item->food_rarity }}" placeholder="{{ __('1.00') }}" min="1" step="0.01" required />
+                                        <input class="form-control{{ $errors->has('food_rarity') ? ' is-invalid' : '' }}" name="food_rarity" id="input-food_rarity" type="number" value="{{ $food_item->food_rarity }}" placeholder="{{ __('1.00') }}" step="0.01" required />
                                         @if ($errors->has('food_rarity'))
                                             <span id="food_rarity-error" class="error text-danger" for="input-food_rarity">{{ $errors->first('food_rarity') }}</span>
                                         @endif

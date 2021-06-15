@@ -14,8 +14,8 @@
         <v-col md="10" sm="12">
             <v-card>
                 <div class="card-header card-header-primary content-header">
-                    <h4 class="card-title">{{ __('FoodItem Priority') }}</h4>
-                    <a href="{{ route('cm3.food-items.create') }}" class="btn btn-sm btn-primary text-white">{{ __('Add fooditem Priority') }}</a>
+                    <h4 class="card-title">{{ __('FoodItem') }}</h4>
+                    <a href="{{ route('cm3.food-items.create') }}" class="btn btn-sm btn-primary text-white">{{ __('Add fooditem') }}</a>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
