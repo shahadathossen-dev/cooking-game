@@ -47,7 +47,7 @@
                                     <label class="col-sm-2 col-form-label">{{ __('Level Score') }}</label>
                                     <div class="col-sm-7">
                                         <div class="form-group{{ $errors->has('lvl_score') ? ' has-danger' : '' }}">
-                                            <input class="form-control{{ $errors->has('lvl_score') ? ' is-invalid' : '' }}" name="lvl_score" id="input-lvl_score" type="number" placeholder="{{ __('10') }}" min="1" step="0.01" required />
+                                            <input class="form-control{{ $errors->has('lvl_score') ? ' is-invalid' : '' }}" name="lvl_score" id="input-lvl_score" type="number" placeholder="{{ __('10') }}" step="0.01" required />
                                             @if ($errors->has('lvl_score'))
                                                 <span id="lvl_score-error" class="error text-danger" for="input-lvl_score">{{ $errors->first('lvl_score') }}</span>
                                             @endif
