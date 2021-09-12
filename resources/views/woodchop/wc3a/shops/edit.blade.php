@@ -60,15 +60,15 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Wood Score') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Item Type') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('wood_score') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('wood_score') ? ' is-invalid' : '' }}"
-                                                            name="wood_score" id="input-wood_score" type="number"
+                                                            name="wood_score" id="input-wood_score" type="text"
                                                             value="{{ $shop->wood_score }}"
-                                                            placeholder="{{ __('1') }}" required />
+                                                            required />
                                                         @if ($errors->has('wood_score'))
                                                             <span id="wood_score-error" class="error text-danger"
                                                                 for="input-wood_score">{{ $errors->first('wood_score') }}</span>
@@ -79,15 +79,15 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Cat. Score') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Bonus String') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('cat_score') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('cat_score') ? ' is-invalid' : '' }}"
-                                                            name="cat_score" id="input-cat_score" type="number"
+                                                            name="cat_score" id="input-cat_score" type="text"
                                                             value="{{ $shop->cat_score }}"
-                                                            placeholder="{{ __('1') }}" required />
+                                                            required />
                                                         @if ($errors->has('cat_score'))
                                                             <span id="cat_score-error" class="error text-danger"
                                                                 for="input-cat_score">{{ $errors->first('cat_score') }}</span>
@@ -141,15 +141,15 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Wood Cost') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Branch Destruction Power') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('wood_cost') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('wood_cost') ? ' is-invalid' : '' }}"
-                                                            name="wood_cost" id="input-wood_cost" type="number"
+                                                            name="wood_cost" id="input-wood_cost" type="text"
                                                             value="{{ $shop->wood_cost }}"
-                                                            placeholder="{{ __('1') }}" required />
+                                                            required />
                                                         @if ($errors->has('wood_cost'))
                                                             <span id="wood_cost-error" class="error text-danger"
                                                                 for="input-wood_cost">{{ $errors->first('wood_cost') }}</span>

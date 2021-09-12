@@ -40,10 +40,10 @@
                                     {{ __('Name') }}
                                 </th>
                                 <th>
-                                    {{ __('Wood Score') }}
+                                    {{ __('Item Type') }}
                                 </th>
                                 <th>
-                                    {{ __('Cat. Score') }}
+                                    {{ __('Bonus String') }}
                                 </th>
                                 <th>
                                     {{ __('Wood Curr') }}
@@ -56,7 +56,7 @@
                                 </th>
 
                                 <th>
-                                    {{ __('Wood Cost') }}
+                                    {{ __('Branch Destruction Power') }}
                                 </th>
                                 <th>
                                     {{ __('Cat. Cost') }}

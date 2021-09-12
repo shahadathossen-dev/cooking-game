@@ -21,12 +21,12 @@
                     @if (session('status'))
                     <div class="row">
                         <div class="col-sm-12">
-                        <div class="alert alert-success">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <i class="material-icons">close</i>
-                            </button>
-                            <span>{{ session('status') }}</span>
-                        </div>
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                <span>{{ session('status') }}</span>
+                            </div>
                         </div>
                     </div>
                     @endif
@@ -72,7 +72,7 @@
                                                 <i class="material-icons">edit</i>
                                                 <div class="ripple-container"></div>
                                             </a>
-                                        
+
                                             <button type="submit" class="btn btn-danger btn-sm" data-original-title="" title="Delete user" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : event.preventDefault()">
                                                 <i class="material-icons">close</i>
                                                 <div class="ripple-container"></div>
