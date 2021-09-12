@@ -25,8 +25,8 @@ class ShopRequest extends FormRequest
     {
         return [
             'shop_name' => ['required', 'string'],
-            'wood_score' => ['required', 'numeric'],
-            'cat_score' => ['required', 'numeric'],
+            'wood_score' => ['required', 'string'],
+            'cat_score' => ['required', 'string'],
             'wood_currency' => ['required', 'numeric'],
             'cat_currency' => ['required', 'numeric'],
             'physics_val' => ['required', 'numeric'],
