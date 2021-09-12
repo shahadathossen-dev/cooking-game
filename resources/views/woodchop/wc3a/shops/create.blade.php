@@ -117,7 +117,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Cat. Currencty') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Honey Currencty') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('cat_currency') ? ' has-danger' : '' }}">
@@ -143,8 +143,8 @@
                                                         class="form-group{{ $errors->has('wood_cost') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('wood_cost') ? ' is-invalid' : '' }}"
-                                                            name="wood_cost" id="input-wood_cost" type="text"
-                                                            required />
+                                                            name="wood_cost" id="input-wood_cost" type="number"
+                                                            placeholder="{{ __('1') }}" required />
                                                         @if ($errors->has('wood_cost'))
                                                             <span id="wood_cost-error" class="error text-danger"
                                                                 for="input-wood_cost">{{ $errors->first('wood_cost') }}</span>
@@ -155,7 +155,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Cat. Cost') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Honey Cost') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('cat_cost') ? ' has-danger' : '' }}">
