@@ -49,7 +49,7 @@
                                     {{ __('Wood Curr') }}
                                 </th>
                                 <th>
-                                    {{ __('Cat. Curr') }}
+                                    {{ __('Honey Curr') }}
                                 </th>
                                 <th>
                                     {{ __('Physics Val') }}
@@ -59,7 +59,7 @@
                                     {{ __('Branch Destruction Power') }}
                                 </th>
                                 <th>
-                                    {{ __('Cat. Cost') }}
+                                    {{ __('Honey Cost') }}
                                 </th>
                                 <th>{{ __('Avatar') }}</th>
 
