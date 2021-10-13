@@ -41,7 +41,7 @@
                                         {{ __('Level Name') }}
                                     </th>
                                     <th>
-                                        {{ __('Level Value') }}
+                                        {{ __('Level Cost') }}
                                     </th>
                                     <th>
                                         {{ __('Actions') }}

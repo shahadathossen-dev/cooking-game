@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Level Value') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Level Cost') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('grade_value') ? ' has-danger' : '' }}">
