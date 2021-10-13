@@ -1,4 +1,4 @@
-@extends('layouts.frontend', ['activePage' => 'grade-management', 'titlePage' => __('Grade Management')])
+@extends('layouts.frontend', ['activePage' => 'grade-management', 'titlePage' => __('Level Management')])
 
 @section('content')
     <main class="content">
@@ -21,14 +21,14 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Grade Name') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Level Name') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('grade_name') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('grade_name') ? ' is-invalid' : '' }}"
                                                             name="grade_name" id="input-grade_name" type="text"
-                                                            placeholder="{{ __('Grade Name') }}"
+                                                            placeholder="{{ __('Level Name') }}"
                                                             value="{{ $grade->grade_name }}" required="true"
                                                             aria-required="true" />
                                                         @if ($errors->has('grade_name'))
@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Grade Value') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Level Value') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('grade_value') ? ' has-danger' : '' }}">

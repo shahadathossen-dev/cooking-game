@@ -1,4 +1,4 @@
-@extends('layouts.frontend', ['activePage' => 'grade-management', 'titlePage' => __('Grade Management')])
+@extends('layouts.frontend', ['activePage' => 'grade-management', 'titlePage' => __('Level Management')])
 @push('styles')
     <style>
         .table tr td {
@@ -38,10 +38,10 @@
                                         {{ __('Sl. No.') }}
                                     </th>
                                     <th>
-                                        {{ __('Grade Name') }}
+                                        {{ __('Level Name') }}
                                     </th>
                                     <th>
-                                        {{ __('Grade Value') }}
+                                        {{ __('Level Value') }}
                                     </th>
                                     <th>
                                         {{ __('Actions') }}

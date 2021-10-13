@@ -21,14 +21,14 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="row">
-                                                <label class="col-sm-3 col-form-label">{{ __('Name') }}</label>
+                                                <label class="col-sm-3 col-form-label">{{ __('Item ID') }}</label>
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('shop_name') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('shop_name') ? ' is-invalid' : '' }}"
                                                             name="shop_name" id="input-shop_name" type="text"
-                                                            placeholder="{{ __('Shop Name') }}"
+                                                            placeholder="{{ __('Item ID') }}"
                                                             value="{{ old('shop_name') }}" required="true"
                                                             aria-required="true" />
                                                         @if ($errors->has('shop_name'))

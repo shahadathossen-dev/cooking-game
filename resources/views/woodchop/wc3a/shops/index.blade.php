@@ -37,7 +37,7 @@
                                     {{ __('Sl. No.') }}
                                 </th>
                                 <th>
-                                    {{ __('Name') }}
+                                    {{ __('Item ID') }}
                                 </th>
                                 <th>
                                     {{ __('Item Type') }}
