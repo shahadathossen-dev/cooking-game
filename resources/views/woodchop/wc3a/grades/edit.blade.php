@@ -1,11 +1,11 @@
-@extends('layouts.frontend', ['activePage' => 'grade-management', 'titlePage' => __('Level Management')])
+@extends('layouts.frontend', ['activePage' => 'level-management', 'titlePage' => __('Level Management')])
 
 @section('content')
     <main class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form method="post" action="{{ route('woodchop.wc3a.grades.update', $grade) }}" autocomplete="off"
+                    <form method="post" action="{{ route('woodchop.wc3a.grades.update', $level) }}" autocomplete="off"
                         class="form-horizontal" enctype="multipart/form-data">
                         @csrf
                         @method('put')
@@ -29,7 +29,7 @@
                                                             class="form-control{{ $errors->has('grade_name') ? ' is-invalid' : '' }}"
                                                             name="grade_name" id="input-grade_name" type="text"
                                                             placeholder="{{ __('Level Name') }}"
-                                                            value="{{ $grade->grade_name }}" required="true"
+                                                            value="{{ $level->grade_name }}" required="true"
                                                             aria-required="true" />
                                                         @if ($errors->has('grade_name'))
                                                             <span id="grade_name-error" class="error text-danger"
@@ -48,7 +48,7 @@
                                                         <input
                                                             class="form-control{{ $errors->has('grade_value') ? ' is-invalid' : '' }}"
                                                             name="grade_value" id="input-grade_value" type="number"
-                                                            value="{{ $grade->grade_value }}"
+                                                            value="{{ $level->grade_value }}"
                                                             placeholder="{{ __('1') }}" required />
                                                         @if ($errors->has('grade_value'))
                                                             <span id="grade_value-error" class="error text-danger"

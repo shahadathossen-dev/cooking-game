@@ -1,4 +1,4 @@
-@extends('layouts.frontend', ['activePage' => 'grade-management', 'titlePage' => __('Level Management')])
+@extends('layouts.frontend', ['activePage' => 'level-management', 'titlePage' => __('Level Management')])
 @push('styles')
     <style>
         .table tr td {
@@ -14,9 +14,9 @@
             <v-col cols="12">
                 <v-card>
                     <div class="card-header card-header-primary content-header">
-                        <h4 class="card-title">{{ __('Grades') }}</h4>
-                        <a href="{{ route('woodchop.wc3a.grades.create') }}"
-                            class="btn btn-sm btn-primary text-white">{{ __('Add grade') }}</a>
+                        <h4 class="card-title">{{ __('Levels') }}</h4>
+                        <a href="{{ route('woodchop.wc3a.levels.create') }}"
+                            class="btn btn-sm btn-primary text-white">{{ __('Add level') }}</a>
                     </div>
                     <div class="card-body">
                         @if (session('status'))
@@ -48,33 +48,33 @@
                                     </th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($grades as $grade)
+                                    @foreach ($levels as $level)
                                         <tr>
                                             <td>
                                                 {{ $loop->index + 1 }}
                                             </td>
                                             <td>
-                                                {{ $grade->grade_name }}
+                                                {{ $level->grade_name }}
                                             </td>
                                             <td>
-                                                {{ $grade->grade_value }}
+                                                {{ $level->grade_value }}
                                             </td>
 
                                             <td class="td-actions text-right">
-                                                <form action="{{ route('woodchop.wc3a.grades.destroy', $grade) }}"
+                                                <form action="{{ route('woodchop.wc3a.levels.destroy', $level) }}"
                                                     method="post">
                                                     @csrf
 
                                                     <a rel="tooltip" class="btn btn-success btn-sm"
-                                                        href="{{ route('woodchop.wc3a.grades.edit', $grade) }}"
+                                                        href="{{ route('woodchop.wc3a.levels.edit', $level) }}"
                                                         data-original-title="" title="">
                                                         <i class="material-icons">edit</i>
                                                         <div class="ripple-container"></div>
                                                     </a>
 
                                                     <button type="submit" class="btn btn-danger btn-sm"
-                                                        data-original-title="" title="Delete grade"
-                                                        onclick="confirm('Are you sure you want to delete the grade?') ? this.parentElement.submit() : event.preventDefault()">
+                                                        data-original-title="" title="Delete level"
+                                                        onclick="confirm('Are you sure you want to delete the level?') ? this.parentElement.submit() : event.preventDefault()">
                                                         <i class="material-icons">close</i>
                                                         <div class="ripple-container"></div>
                                                     </button>

@@ -280,12 +280,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('woodchop/wc3a/shops/{shop}', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'destroy'])->name('woodchop.wc3a.shops.destroy');
 
     // Grade ROUTES
-    Route::get('woodchop/wc3a/grades', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'index'])->name('woodchop.wc3a.grades.index');
-    Route::get('woodchop/wc3a/grades/create', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'create'])->name('woodchop.wc3a.grades.create');
-    Route::post('woodchop/wc3a/grades', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'store'])->name('woodchop.wc3a.grades.store');
-    Route::get('woodchop/wc3a/grades/{grade}/edit', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'edit'])->name('woodchop.wc3a.grades.edit');
-    Route::put('woodchop/wc3a/grades/{grade}', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'update'])->name('woodchop.wc3a.grades.update');
-    Route::post('woodchop/wc3a/grades/{grade}', [App\Http\Controllers\WoodChop\WC3A\GradeController::class, 'destroy'])->name('woodchop.wc3a.grades.destroy');
+    Route::get('woodchop/wc3a/levels', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'index'])->name('woodchop.wc3a.levels.index');
+    Route::get('woodchop/wc3a/levels/create', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'create'])->name('woodchop.wc3a.levels.create');
+    Route::post('woodchop/wc3a/levels', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'store'])->name('woodchop.wc3a.levels.store');
+    Route::get('woodchop/wc3a/levels/{level}/edit', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'edit'])->name('woodchop.wc3a.levels.edit');
+    Route::put('woodchop/wc3a/levels/{level}', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'update'])->name('woodchop.wc3a.levels.update');
+    Route::post('woodchop/wc3a/levels/{level}', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'destroy'])->name('woodchop.wc3a.levels.destroy');
 
     // CM3B ROUTES
         // Settings ROUTES

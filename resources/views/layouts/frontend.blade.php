@@ -396,14 +396,14 @@
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
-                                <a href="{{route('woodchop.wc3a.grades.index')}}" style="text-decoration: none">
+                                <a href="{{route('woodchop.wc3a.levels.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>
                                         </v-list-item-icon>
 
                                         <v-list-item-content>
-                                            <v-list-item-title>{{ 'Grades' }}</v-list-item-title>
+                                            <v-list-item-title>{{ 'Levels' }}</v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
