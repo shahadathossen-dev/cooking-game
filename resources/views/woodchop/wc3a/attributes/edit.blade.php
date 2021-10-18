@@ -113,7 +113,7 @@
                         </div>
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Honeycomb Score') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Honey Score') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('cat_score') ? ' has-danger' : '' }}">
                                         <input class="form-control{{ $errors->has('cat_score') ? ' is-invalid' : '' }}" value="{{$attribute->cat_score}}" name="cat_score" id="input-cat_score" type="number" placeholder="{{ __('10') }}" required />
@@ -141,7 +141,7 @@
                         </div>
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Honeycomb Currency') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Honey Currency') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('cat_currency') ? ' has-danger' : '' }}">
                                         <input class="form-control{{ $errors->has('cat_currency') ? ' is-invalid' : '' }}" value="{{$attribute->cat_currency}}" name="cat_currency" id="input-cat_currency" type="number" placeholder="{{ __('10') }}" required />

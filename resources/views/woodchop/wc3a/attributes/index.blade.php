@@ -118,7 +118,7 @@
                                                         {{ $attribute->wood_currency }}
                                                     </td>
                                                     <th>
-                                                        {{ __('Honeycomb Currency') }}
+                                                        {{ __('Honey Currency') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_currency }}
@@ -140,7 +140,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        {{ __('Honeycomb Score') }}
+                                                        {{ __('Honey Score') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_score }}
