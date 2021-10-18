@@ -62,7 +62,7 @@
                                                         {{ $attribute->branch_freq }}
                                                     </td>
                                                     <th>
-                                                        {{ __('Cat Frequency') }}
+                                                        {{ __('Honeycomb Frequency') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_freq }}
@@ -70,7 +70,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        {{ __('Cat Weight') }}
+                                                        {{ __('Honeycomb Weight') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_weight }}
@@ -118,7 +118,7 @@
                                                         {{ $attribute->wood_currency }}
                                                     </td>
                                                     <th>
-                                                        {{ __('Cat Currency') }}
+                                                        {{ __('Honeycomb Currency') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_currency }}
@@ -140,7 +140,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        {{ __('Cat Score') }}
+                                                        {{ __('Honeycomb Score') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_score }}

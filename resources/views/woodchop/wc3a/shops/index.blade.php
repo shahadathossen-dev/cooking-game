@@ -14,7 +14,7 @@
         <v-col cols="12">
             <v-card>
                 <div class="card-header card-header-primary content-header">
-                    <h4 class="card-title">{{ __('Ingredients') }}</h4>
+                    <h4 class="card-title">{{ __('Shop') }}</h4>
                     <a href="{{ route('woodchop.wc3a.shops.create') }}" class="btn btn-sm btn-primary text-white">{{ __('Add shop') }}</a>
                 </div>
                 <div class="card-body">
