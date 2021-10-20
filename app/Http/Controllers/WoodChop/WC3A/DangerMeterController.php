@@ -50,7 +50,7 @@ class DangerMeterController extends Controller
      */
     public function show(DangerMeter $dangerMeter)
     {
-        return view('woodchop.wc3a.danger-meter.show', compact('dangerMeter'));
+        return view('woodchop.wc3a.danger-meters.show', compact('dangerMeter'));
     }
 
     /**
@@ -61,7 +61,7 @@ class DangerMeterController extends Controller
      */
     public function edit(DangerMeter $dangerMeter)
     {
-        return view('woodchop.wc3a.danger-meter.edit', compact('dangerMeter'));
+        return view('woodchop.wc3a.danger-meters.edit', compact('dangerMeter'));
     }
 
     /**
