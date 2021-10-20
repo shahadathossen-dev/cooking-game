@@ -5,7 +5,7 @@ namespace App\Http\Controllers\WoodChop\WC3A;
 use Illuminate\Http\Request;
 use App\Models\WoodChop\WC3A\DangerMeter;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\WoodChop\WC3A\GradeRequest;
+use App\Http\Requests\WoodChop\WC3A\DangerMeterRequest;
 
 class DangerMeterController extends Controller
 {
@@ -35,7 +35,7 @@ class DangerMeterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(GradeRequest $request)
+    public function store(DangerMeterRequest $request)
     {
         $newIngredient = DangerMeter::create($request->all());
 
@@ -71,7 +71,7 @@ class DangerMeterController extends Controller
      * @param  \App\Models\WoodChop\WC3A\DangerMeter  $dangerMeter
      * @return \Illuminate\Http\Response
      */
-    public function update(GradeRequest $request, DangerMeter $dangerMeter)
+    public function update(DangerMeterRequest $request, DangerMeter $dangerMeter)
     {
         $updated = $dangerMeter->update($request->all());
         return redirect()->route('woodchop.wc3a.danger-meters.index')->withStatus(__('DangerMeter successfully updated.'));
