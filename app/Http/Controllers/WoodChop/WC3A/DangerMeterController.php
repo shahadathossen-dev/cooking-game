@@ -39,7 +39,7 @@ class DangerMeterController extends Controller
     {
         $newIngredient = DangerMeter::create($request->all());
 
-        return redirect()->route('woodchop.wc3a.danger-meters.index')->withStatus(__('DangerMeter created successfully.'));
+        return redirect()->route('woodchop.wc3a.danger-meter.index')->withStatus(__('DangerMeter created successfully.'));
     }
 
     /**
@@ -50,7 +50,7 @@ class DangerMeterController extends Controller
      */
     public function show(DangerMeter $dangerMeter)
     {
-        return view('woodchop.wc3a.danger-meters.show', compact('dangerMeter'));
+        return view('woodchop.wc3a.danger-meter.show', compact('dangerMeter'));
     }
 
     /**
@@ -61,7 +61,7 @@ class DangerMeterController extends Controller
      */
     public function edit(DangerMeter $dangerMeter)
     {
-        return view('woodchop.wc3a.danger-meters.edit', compact('dangerMeter'));
+        return view('woodchop.wc3a.danger-meter.edit', compact('dangerMeter'));
     }
 
     /**
@@ -74,7 +74,7 @@ class DangerMeterController extends Controller
     public function update(DangerMeterRequest $request, DangerMeter $dangerMeter)
     {
         $updated = $dangerMeter->update($request->all());
-        return redirect()->route('woodchop.wc3a.danger-meters.index')->withStatus(__('DangerMeter successfully updated.'));
+        return redirect()->route('woodchop.wc3a.danger-meter.index')->withStatus(__('DangerMeter successfully updated.'));
     }
 
     /**
@@ -87,6 +87,6 @@ class DangerMeterController extends Controller
     {
         $dangerMeter->delete();
 
-        return redirect()->route('woodchop.wc3a.danger-meters.index')->withStatus(__('DangerMeter successfully deleted.'));
+        return redirect()->route('woodchop.wc3a.danger-meter.index')->withStatus(__('DangerMeter successfully deleted.'));
     }
 }
