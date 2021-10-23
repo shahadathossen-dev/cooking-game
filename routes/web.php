@@ -272,20 +272,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('dungeon-cleaner/attributes/{attribute}', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'destroy'])->name('dungeon-cleaner.attributes.destroy');
 
     // Danger Meter ROUTES
-    Route::get('dungeon-cleaner/pillur-coordinates', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'index'])->name('dungeon-cleaner.pillur-coordinates.index');
-    Route::get('dungeon-cleaner/pillur-coordinates/create', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'create'])->name('dungeon-cleaner.pillur-coordinates.create');
-    Route::post('dungeon-cleaner/pillur-coordinates', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'store'])->name('dungeon-cleaner.pillur-coordinates.store');
-    Route::get('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}/edit', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'edit'])->name('dungeon-cleaner.pillur-coordinates.edit');
-    Route::put('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'update'])->name('dungeon-cleaner.pillur-coordinates.update');
-    Route::post('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'destroy'])->name('dungeon-cleaner.pillur-coordinates.destroy');
+    Route::get('dungeon-cleaner/pillur-coordinates', [App\Http\Controllers\DungeonCleaner\PillurCoordinateController::class, 'index'])->name('dungeon-cleaner.pillur-coordinates.index');
+    Route::get('dungeon-cleaner/pillur-coordinates/create', [App\Http\Controllers\DungeonCleaner\PillurCoordinateController::class, 'create'])->name('dungeon-cleaner.pillur-coordinates.create');
+    Route::post('dungeon-cleaner/pillur-coordinates', [App\Http\Controllers\DungeonCleaner\PillurCoordinateController::class, 'store'])->name('dungeon-cleaner.pillur-coordinates.store');
+    Route::get('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}/edit', [App\Http\Controllers\DungeonCleaner\PillurCoordinateController::class, 'edit'])->name('dungeon-cleaner.pillur-coordinates.edit');
+    Route::put('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}', [App\Http\Controllers\DungeonCleaner\PillurCoordinateController::class, 'update'])->name('dungeon-cleaner.pillur-coordinates.update');
+    Route::post('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}', [App\Http\Controllers\DungeonCleaner\PillurCoordinateController::class, 'destroy'])->name('dungeon-cleaner.pillur-coordinates.destroy');
 
     // Shop ROUTES
-    Route::get('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'index'])->name('dungeon-cleaner.tile-spawns.index');
-    Route::get('dungeon-cleaner/tile-spawns/create', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'create'])->name('dungeon-cleaner.tile-spawns.create');
-    Route::post('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'store'])->name('dungeon-cleaner.tile-spawns.store');
-    Route::get('dungeon-cleaner/tile-spawns/{shop}/edit', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'edit'])->name('dungeon-cleaner.tile-spawns.edit');
-    Route::put('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'update'])->name('dungeon-cleaner.tile-spawns.update');
-    Route::post('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'destroy'])->name('dungeon-cleaner.tile-spawns.destroy');
+    Route::get('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'index'])->name('dungeon-cleaner.tile-spawns.index');
+    Route::get('dungeon-cleaner/tile-spawns/create', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'create'])->name('dungeon-cleaner.tile-spawns.create');
+    Route::post('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'store'])->name('dungeon-cleaner.tile-spawns.store');
+    Route::get('dungeon-cleaner/tile-spawns/{shop}/edit', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'edit'])->name('dungeon-cleaner.tile-spawns.edit');
+    Route::put('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'update'])->name('dungeon-cleaner.tile-spawns.update');
+    Route::post('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'destroy'])->name('dungeon-cleaner.tile-spawns.destroy');
 
     // WC3A ROUTES
     // Settings ROUTES
