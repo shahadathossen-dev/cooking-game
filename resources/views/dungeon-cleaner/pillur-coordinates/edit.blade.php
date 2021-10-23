@@ -12,7 +12,7 @@
 
                         <div class="card ">
                             <div class="card-header card-header-primary content-header">
-                                <h4 class="card-title">{{ __('Add Shop') }}</h4>
+                                <h4 class="card-title">{{ __('Add Pillur Coordinate') }}</h4>
                                 <a href="{{ route('dungeon-cleaner.pillur-coordinates.index') }}"
                                     class="btn btn-sm btn-primary text-white">{{ __('Back to list') }}</a>
                             </div>
