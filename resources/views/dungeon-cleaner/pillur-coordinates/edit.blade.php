@@ -1,11 +1,11 @@
-@extends('layouts.frontend', ['activePage' => 'pulliur-coordinates-management', 'titlePage' => __('Pillur Coordinate Management')])
+@extends('layouts.frontend', ['activePage' => 'pillur-coordinates-management', 'titlePage' => __('Pillur Coordinate Management')])
 
 @section('content')
     <main class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form method="post" action="{{ route('dungeon-cleaner.pulliur-coordinates.update', $pillurCoordinate) }}" autocomplete="off"
+                    <form method="post" action="{{ route('dungeon-cleaner.pillur-coordinates.update', $pillurCoordinate) }}" autocomplete="off"
                         class="form-horizontal" enctype="multipart/form-data">
                         @csrf
                         @method('put')
@@ -13,7 +13,7 @@
                         <div class="card ">
                             <div class="card-header card-header-primary content-header">
                                 <h4 class="card-title">{{ __('Add Shop') }}</h4>
-                                <a href="{{ route('dungeon-cleaner.pulliur-coordinates.index') }}"
+                                <a href="{{ route('dungeon-cleaner.pillur-coordinates.index') }}"
                                     class="btn btn-sm btn-primary text-white">{{ __('Back to list') }}</a>
                             </div>
                             <div class="card-body ">
