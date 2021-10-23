@@ -49,7 +49,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($arrtibutes as $attribute)
+                                                @foreach ($attributes as $attribute)
                                                 <tr>
                                                     <th>
                                                         {{ $attribute->attr_name }}
