@@ -262,6 +262,31 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('woodchop/wc2b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'update'])->name('woodchop.wc2b.attributes.update');
     Route::post('woodchop/wc2b/attributes/{attribute}', [App\Http\Controllers\WoodChop\WC2B\AttributeController::class, 'destroy'])->name('woodchop.wc2b.attributes.destroy');
 
+    // Dungeon Cleaner ROUTES
+    // Settings ROUTES
+    Route::get('dungeon-cleaner/attributes', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'index'])->name('dungeon-cleaner.attributes.index');
+    Route::get('dungeon-cleaner/attributes/create', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'create'])->name('dungeon-cleaner.attributes.create');
+    Route::post('dungeon-cleaner/attributes', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'store'])->name('dungeon-cleaner.attributes.store');
+    Route::get('dungeon-cleaner/attributes/{attribute}/edit', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'edit'])->name('dungeon-cleaner.attributes.edit');
+    Route::put('dungeon-cleaner/attributes/{attribute}', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'update'])->name('dungeon-cleaner.attributes.update');
+    Route::post('dungeon-cleaner/attributes/{attribute}', [App\Http\Controllers\DungeonCleaner\AttributeController::class, 'destroy'])->name('dungeon-cleaner.attributes.destroy');
+
+    // Danger Meter ROUTES
+    Route::get('dungeon-cleaner/pillur-coordinates', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'index'])->name('dungeon-cleaner.pillur-coordinates.index');
+    Route::get('dungeon-cleaner/pillur-coordinates/create', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'create'])->name('dungeon-cleaner.pillur-coordinates.create');
+    Route::post('dungeon-cleaner/pillur-coordinates', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'store'])->name('dungeon-cleaner.pillur-coordinates.store');
+    Route::get('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}/edit', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'edit'])->name('dungeon-cleaner.pillur-coordinates.edit');
+    Route::put('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'update'])->name('dungeon-cleaner.pillur-coordinates.update');
+    Route::post('dungeon-cleaner/pillur-coordinates/{pillurCoordinate}', [App\Http\Controllers\DungeonCleaner\DangerMeterController::class, 'destroy'])->name('dungeon-cleaner.pillur-coordinates.destroy');
+
+    // Shop ROUTES
+    Route::get('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'index'])->name('dungeon-cleaner.tile-spawns.index');
+    Route::get('dungeon-cleaner/tile-spawns/create', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'create'])->name('dungeon-cleaner.tile-spawns.create');
+    Route::post('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'store'])->name('dungeon-cleaner.tile-spawns.store');
+    Route::get('dungeon-cleaner/tile-spawns/{shop}/edit', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'edit'])->name('dungeon-cleaner.tile-spawns.edit');
+    Route::put('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'update'])->name('dungeon-cleaner.tile-spawns.update');
+    Route::post('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\ShopController::class, 'destroy'])->name('dungeon-cleaner.tile-spawns.destroy');
+
     // WC3A ROUTES
     // Settings ROUTES
     Route::get('woodchop/wc3a/attributes', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'index'])->name('woodchop.wc3a.attributes.index');

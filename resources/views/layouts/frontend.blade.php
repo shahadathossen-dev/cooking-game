@@ -350,6 +350,45 @@
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                         <v-expansion-panel>
+                            <v-expansion-panel-header>WC3A</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+
+                                <a href="{{route('dungeon-cleaner.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('dungeon-cleaner.pillur-coordinates.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Pillur Coordinates' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('dungeon-cleaner.tile-spawns.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Tile Spawns' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
                             <v-expansion-panel-header>WC1A</v-expansion-panel-header>
                             <v-expansion-panel-content>
                                 <a href="{{route('woodchop.wc1a.attributes.index')}}" style="text-decoration: none">
