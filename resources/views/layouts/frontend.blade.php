@@ -350,7 +350,7 @@
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                         <v-expansion-panel>
-                            <v-expansion-panel-header>WC3A</v-expansion-panel-header>
+                            <v-expansion-panel-header>Dungeon Cleaner</v-expansion-panel-header>
                             <v-expansion-panel-content>
 
                                 <a href="{{route('dungeon-cleaner.attributes.index')}}" style="text-decoration: none">
