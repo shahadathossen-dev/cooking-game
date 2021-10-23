@@ -283,9 +283,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'index'])->name('dungeon-cleaner.tile-spawns.index');
     Route::get('dungeon-cleaner/tile-spawns/create', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'create'])->name('dungeon-cleaner.tile-spawns.create');
     Route::post('dungeon-cleaner/tile-spawns', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'store'])->name('dungeon-cleaner.tile-spawns.store');
-    Route::get('dungeon-cleaner/tile-spawns/{shop}/edit', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'edit'])->name('dungeon-cleaner.tile-spawns.edit');
-    Route::put('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'update'])->name('dungeon-cleaner.tile-spawns.update');
-    Route::post('dungeon-cleaner/tile-spawns/{shop}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'destroy'])->name('dungeon-cleaner.tile-spawns.destroy');
+    Route::get('dungeon-cleaner/tile-spawns/{tileSpawn}/edit', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'edit'])->name('dungeon-cleaner.tile-spawns.edit');
+    Route::put('dungeon-cleaner/tile-spawns/{tileSpawn}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'update'])->name('dungeon-cleaner.tile-spawns.update');
+    Route::post('dungeon-cleaner/tile-spawns/{tileSpawn}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'destroy'])->name('dungeon-cleaner.tile-spawns.destroy');
 
     // WC3A ROUTES
     // Settings ROUTES
