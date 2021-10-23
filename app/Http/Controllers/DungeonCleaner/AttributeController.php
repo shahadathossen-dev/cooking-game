@@ -16,7 +16,7 @@ class AttributeController extends Controller
      */
     public function index(Attribute $attribute)
     {
-        return view('dungeon-cleaner.attributes.index', ['attribute' => $attribute->first()]);
+        return view('dungeon-cleaner.attributes.index', ['attribute' => $attribute->all()]);
     }
 
     /**
