@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form method="post" action="{{ route('dungeon-cleaner.pulliur-coordinates.update', $dangerMeter) }}" autocomplete="off"
+                    <form method="post" action="{{ route('dungeon-cleaner.pulliur-coordinates.update', $pillurCoordinate) }}" autocomplete="off"
                         class="form-horizontal" enctype="multipart/form-data">
                         @csrf
                         @method('put')
@@ -29,7 +29,7 @@
                                                             class="form-control{{ $errors->has('pc_row') ? ' is-invalid' : '' }}"
                                                             name="pc_row" id="input-pc_row" type="number"
                                                             placeholder="{{ __('Row') }}"
-                                                            value="{{ $dangerMeter->pc_row }}" required="true"
+                                                            value="{{ $pillurCoordinate->pc_row }}" required="true"
                                                             aria-required="true" />
                                                         @if ($errors->has('pc_row'))
                                                             <span id="pc_row-error" class="error text-danger"
@@ -49,7 +49,7 @@
                                                             class="form-control{{ $errors->has('pc_col') ? ' is-invalid' : '' }}"
                                                             name="pc_col" id="input-pc_col" type="number"
                                                             placeholder="{{ __('Column') }}"
-                                                            value="{{ $dangerMeter->pc_col }}" required="true"
+                                                            value="{{ $pillurCoordinate->pc_col }}" required="true"
                                                             aria-required="true" />
                                                         @if ($errors->has('pc_col'))
                                                             <span id="pc_col-error" class="error text-danger"
