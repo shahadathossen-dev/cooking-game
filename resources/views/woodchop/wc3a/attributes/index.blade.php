@@ -140,7 +140,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        {{ __('Honey Score') }}
+                                                        {{ __('Free Axe Unlock Time(in hours)') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->cat_score }}

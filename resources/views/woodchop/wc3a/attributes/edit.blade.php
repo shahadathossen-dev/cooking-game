@@ -113,10 +113,10 @@
                         </div>
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Honey Score') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Free Axe Unlock Time(in hours)') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('cat_score') ? ' has-danger' : '' }}">
-                                        <input class="form-control{{ $errors->has('cat_score') ? ' is-invalid' : '' }}" value="{{$attribute->cat_score}}" name="cat_score" id="input-cat_score" type="number" placeholder="{{ __('10') }}" required />
+                                        <input class="form-control{{ $errors->has('cat_score') ? ' is-invalid' : '' }}" value="{{$attribute->cat_score}}" name="cat_score" id="input-cat_score" type="number" min="0.01" step="0.01" placeholder="{{ __('10') }}" required />
                                         @if ($errors->has('cat_score'))
                                             <span id="cat_score-error" class="error text-danger" for="input-cat_score">{{ $errors->first('cat_score') }}</span>
                                         @endif
