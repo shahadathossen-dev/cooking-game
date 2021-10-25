@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\WoodChop\WC3A;
 
+use App\Rules\HigherArchy;
 use Illuminate\Foundation\Http\FormRequest;
 
 class DangerMeterRequest extends FormRequest
@@ -25,10 +26,10 @@ class DangerMeterRequest extends FormRequest
     {
         return [
             'color' => ['required', 'string'],
-            'left' => ['required', 'string'],
-            'right' => ['required', 'string'],
-            'front' => ['required', 'string'],
-            'back' => ['required', 'string'],
+            'left' => ['required', 'numeric', new HigherArchy(request()->get('color'))],
+            'right' => ['required', 'numeric', new HigherArchy(request()->get('color'))],
+            'front' => ['required', 'numeric', new HigherArchy(request()->get('color'))],
+            'back' => ['required', 'numeric', new HigherArchy(request()->get('color'))],
         ];
     }
 }
