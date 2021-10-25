@@ -33,7 +33,7 @@ class HigherArchy implements Rule
         if (($key = array_search($this->color, $this->colors)) !== false) {
             unset($this->colors[$key]);
         }
-        $otherValues = DangerMeter::whereIn('color', $this->colors)->pluck($attribute)->sort()->toArray();
+        $otherValues = DangerMeter::whereIn('color', $this->colors)->pluck($attribute)->toArray();
         if ($this->color === 'Red') {
             if ($value < 0) {
                 $greaterValue = array_filter($otherValues, function ($n) use ($value) {
@@ -47,16 +47,17 @@ class HigherArchy implements Rule
                 return !count($lessValue);
             }
         } else if ($this->color === 'Yellow') {
-            return ($otherValues[0] < $value) && ($value < $otherValues[1]);
+            if ($value < 0)
+                return (($otherValues[0] < $value) && ($value < $otherValues[1]));
+            return (($otherValues[0] > $value) && ($value > $otherValues[1]));
         } else if ($this->color === 'Green') {
             if ($value < 0) {
                 $lessValue = array_filter($otherValues, function ($n) use ($value) {
                     return $value < $n;
                 });
                 return !count($lessValue);
-            }
-             else {
-                $greaterValue = array_filter($otherValues, function($n) use ($value) {
+            } else {
+                $greaterValue = array_filter($otherValues, function ($n) use ($value) {
                     return $value > $n;
                 });
                 return !count($greaterValue);
