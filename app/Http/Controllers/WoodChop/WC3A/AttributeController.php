@@ -37,7 +37,7 @@ class AttributeController extends Controller
      */
     public function store(AttributeRequest $request)
     {
-        $newIngredient = Attribute::create($request->all());
+        $newIngredient = Attribute::create($request->except('pickColor'));
 
         return redirect()->route('woodchop.wc3a.attributes.index')->withStatus(__('Attribute created successfully.'));
     }
@@ -73,7 +73,7 @@ class AttributeController extends Controller
      */
     public function update(AttributeRequest $request, Attribute $attribute)
     {
-        $updated = $attribute->update($request->all());
+        $updated = $attribute->update($request->except('pickColor'));
         return redirect()->route('woodchop.wc3a.attributes.index')->withStatus(__('Attribute successfully updated.'));
     }
 

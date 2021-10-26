@@ -46,11 +46,20 @@
                                                     <div
                                                         class="form-group{{ $errors->has('attr_value') ? ' has-danger' : '' }}">
                                                         <input
+                                                            v-if="pickColor"
                                                             class="form-control{{ $errors->has('attr_value') ? ' is-invalid' : '' }}"
                                                             name="attr_value" id="input-attr_value" type="text"
                                                             placeholder="{{ __('Attribute value') }}"
                                                             value="{{ old('attr_value') }}" required="true"
                                                             aria-required="true" />
+                                                        <input
+                                                            v-else
+                                                            class="form-control{{ $errors->has('attr_value') ? ' is-invalid' : '' }}"
+                                                            name="attr_value" id="input-attr_value" type="text"
+                                                            placeholder="{{ __('Attribute value') }}"
+                                                            value="{{ old('attr_value') }}" required="true"
+                                                            aria-required="true" />
+                                                        <input type="checkbox" v-model="pickColor"> Choose color
                                                         @if ($errors->has('attr_value'))
                                                             <span id="attr_value-error" class="error text-danger"
                                                                 for="input-attr_value">{{ $errors->first('attr_value') }}</span>
@@ -92,6 +101,7 @@
                 drawer: false,
                 proecssing: false,
                 roles: [],
+                pickColor: false,
             },
             filters: {},
             methods: {
