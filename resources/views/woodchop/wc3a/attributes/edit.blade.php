@@ -144,7 +144,7 @@
                                 <label class="col-md-4 col-form-label">{{ __('Honey Currency') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('cat_currency') ? ' has-danger' : '' }}">
-                                        <input class="form-control{{ $errors->has('cat_currency') ? ' is-invalid' : '' }}" value="{{$attribute->cat_currency}}" name="cat_currency" id="input-cat_currency" type="number" placeholder="{{ __('10') }}" required />
+                                        <input class="form-control{{ $errors->has('cat_currency') ? ' is-invalid' : '' }}" value="{{$attribute->cat_currency}}" name="cat_currency" id="input-cat_currency" type="number" placeholder="{{ __('10') }}" min="0.01" step="0.01" required />
                                         @if ($errors->has('cat_currency'))
                                             <span id="cat_currency-error" class="error text-danger" for="input-cat_currency">{{ $errors->first('cat_currency') }}</span>
                                         @endif
