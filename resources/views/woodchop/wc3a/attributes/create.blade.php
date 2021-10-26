@@ -48,7 +48,7 @@
                                                         <input
                                                             v-if="pickColor"
                                                             class="form-control{{ $errors->has('attr_value') ? ' is-invalid' : '' }}"
-                                                            name="attr_value" id="input-attr_value" type="text"
+                                                            name="attr_value" id="input-attr_value" type="color"
                                                             placeholder="{{ __('Attribute value') }}"
                                                             value="{{ old('attr_value') }}" required="true"
                                                             aria-required="true" />
