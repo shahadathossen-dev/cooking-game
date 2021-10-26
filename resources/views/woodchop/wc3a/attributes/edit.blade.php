@@ -46,12 +46,22 @@
                                                 <div class="col-sm-7">
                                                     <div
                                                         class="form-group{{ $errors->has('attr_value') ? ' has-danger' : '' }}">
-                                                        <input
-                                                            class="form-control{{ $errors->has('attr_value') ? ' is-invalid' : '' }}"
-                                                            name="attr_value" id="input-attr_value" type="text"
-                                                            placeholder="{{ __('attr_value') }}"
-                                                            value="{{ $attribute->attr_value }}" required="true"
-                                                            aria-required="true" />
+                                                        @if (strpos($attribute->attr_name, 'color'))
+                                                            <input
+                                                                class="form-control{{ $errors->has('attr_value') ? ' is-invalid' : '' }}"
+                                                                name="attr_value" id="input-attr_value" type="color"
+                                                                placeholder="{{ __('attr_value') }}"
+                                                                value="{{ $attribute->attr_value }}" required="true"
+                                                                aria-required="true" />
+                                                        @else
+                                                            <input
+                                                                class="form-control{{ $errors->has('attr_value') ? ' is-invalid' : '' }}"
+                                                                name="attr_value" id="input-attr_value" type="text"
+                                                                placeholder="{{ __('attr_value') }}"
+                                                                value="{{ $attribute->attr_value }}" required="true"
+                                                                aria-required="true" />
+                                                        @endif
+
                                                         @if ($errors->has('attr_value'))
                                                             <span id="attr_value-error" class="error text-danger"
                                                                 for="input-attr_value">{{ $errors->first('attr_value') }}</span>
