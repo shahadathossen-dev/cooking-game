@@ -85,10 +85,10 @@
                         </div>
                         <div class="col-md-6 py-0">
                             <div class="row">
-                                <label class="col-md-4 col-form-label">{{ __('Base Score') }}</label>
+                                <label class="col-md-4 col-form-label">{{ __('Free Axe Ad Unlock Time(in minutes)') }}</label>
                                 <div class="col-md-8">
                                     <div class="form-group{{ $errors->has('base_score') ? ' has-danger' : '' }}">
-                                        <input class="form-control{{ $errors->has('base_score') ? ' is-invalid' : '' }}" value="{{$attribute->base_score}}" name="base_score" id="input-base_score" type="number" placeholder="{{ __('10') }}" required />
+                                        <input class="form-control{{ $errors->has('base_score') ? ' is-invalid' : '' }}" value="{{$attribute->base_score}}" name="base_score" id="input-base_score" type="number" placeholder="{{ __('10') }}" min="0.01" step="0.1" required />
                                         @if ($errors->has('base_score'))
                                             <span id="base_score-error" class="error text-danger" for="input-base_score">{{ $errors->first('base_score') }}</span>
                                         @endif

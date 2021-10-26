@@ -90,7 +90,7 @@
                                                         {{ $attribute->friction }}
                                                     </td>
                                                     <th>
-                                                        {{ __('Base Score') }}
+                                                        {{ __('Free Axe Ad Unlock Time(in minutes)') }}
                                                     </th>
                                                     <td>
                                                         {{ $attribute->base_score }}
