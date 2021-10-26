@@ -24,19 +24,8 @@ class AttributeRequest extends FormRequest
     public function rules()
     {
         return [
-            'branch_freq' => ['required', 'numeric'],
-            'cat_freq' => ['required', 'numeric'],
-            'cat_weight' => ['required', 'numeric'],
-            'gravity' => ['required', 'numeric'],
-            'friction' => ['required', 'numeric'],
-            'base_score' => ['required', 'numeric'],
-            'min_score' => ['required', 'numeric'],
-            'wood_score' => ['required', 'numeric'],
-            'cat_score' => ['required', 'numeric'],
-            'wood_currency' => ['required', 'numeric'],
-            'cat_currency' => ['required', 'numeric'],
-            'game_play_time' => ['required', 'numeric'],
-            'record_time' => ['required', 'numeric'],
+            'attr_name' => ['required', 'string'],
+            'attr_value' => ['required', 'string'],
         ];
     }
 }

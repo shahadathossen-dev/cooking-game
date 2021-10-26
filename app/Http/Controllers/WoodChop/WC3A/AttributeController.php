@@ -16,7 +16,7 @@ class AttributeController extends Controller
      */
     public function index(Attribute $attribute)
     {
-        return view('woodchop.wc3a.attributes.index', ['attribute' => $attribute->first()]);
+        return view('woodchop.wc3a.attributes.index', ['attributes' => $attribute->all()]);
     }
 
     /**
