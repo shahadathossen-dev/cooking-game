@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form method="post" action="{{ route('woodchop.wc3a.grades.update', $level) }}" autocomplete="off"
+                    <form method="post" action="{{ route('woodchop.wc3a.levels.update', $level) }}" autocomplete="off"
                         class="form-horizontal" enctype="multipart/form-data">
                         @csrf
                         @method('put')
@@ -13,7 +13,7 @@
                         <div class="card ">
                             <div class="card-header card-header-primary content-header">
                                 <h4 class="card-title">{{ __('Add Shop') }}</h4>
-                                <a href="{{ route('woodchop.wc3a.grades.index') }}"
+                                <a href="{{ route('woodchop.wc3a.levels.index') }}"
                                     class="btn btn-sm btn-primary text-white">{{ __('Back to list') }}</a>
                             </div>
                             <div class="card-body ">
