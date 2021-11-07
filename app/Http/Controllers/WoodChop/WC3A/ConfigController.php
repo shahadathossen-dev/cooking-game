@@ -5,7 +5,7 @@ namespace App\Http\Controllers\WoodChop\WC3A;
 use Illuminate\Http\Request;
 use App\Models\WoodChop\WC3A\Config;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ConfigRequest;
+use App\Http\Requests\WoodChop\WC3A\ConfigRequest;
 
 class ConfigController extends Controller
 {
@@ -17,6 +17,16 @@ class ConfigController extends Controller
     public function index(Config $config)
     {
         return view('woodchop.wc3a.configs.index', ['configs' => $config->all()]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getConfig($version)
+    {
+        return Config::whereVersion($version)->first();
     }
 
     /**
@@ -37,13 +47,23 @@ class ConfigController extends Controller
      */
     public function store(ConfigRequest $request)
     {
-        $jsonContent = json_decode(file_get_contents($request->file('file')), true);
+        $jsonContent = json_decode(file_get_contents($request->file('data')), true);
         $file = Config::updateOrCreate(['version' => $request->version], [
-            'file' => $jsonContent,
+            'data' => $jsonContent,
             'version' => $request->version
         ]);
 
-        return redirect()->route('woodchop.wc3a.configs.index')->withStatus(__('Danger Meter created successfully.'));
+        return redirect()->back()->withStatus(__('Danger Meter created successfully.'));
+    }
+
+    public function storeConfig(ConfigRequest $request)
+    {
+        $config = Config::updateOrCreate(['version' => $request->version], [
+            'data' => $request->data,
+            'version' => $request->version
+        ]);
+
+        return ['data' => $config];
     }
 
     /**

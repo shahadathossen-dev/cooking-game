@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\WoodChop\WC3A;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,6 +25,7 @@ class ConfigRequest extends FormRequest
     {
         return [
             'data' => 'required|file|mimes:json,txt',
+            // 'data' => 'required|json',
             'version' => 'required|string|max:255'
         ];
     }

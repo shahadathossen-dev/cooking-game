@@ -20,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 // Route::post('data/post', [App\Http\Controllers\CraniofacialCleftBabyController::class, 'save'])->name('research.save-data');
 // Route::post('validate/email', [App\Http\Controllers\CraniofacialCleftBabyController::class, 'checkEmail'])->name('data.check-email');
+
+
+Route::get('woodchop/wc3a/configs/{version}', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'getConfig'])->name('woodchop.wc3a.configs.getConfig');
+
+Route::post('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'storeConfig'])->name('woodchop.wc3a.configs.store-api');

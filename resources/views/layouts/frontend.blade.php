@@ -468,6 +468,17 @@
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
+                                <a href="{{route('woodchop.wc3a.configs.create')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Configs' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                         <v-expansion-panel>

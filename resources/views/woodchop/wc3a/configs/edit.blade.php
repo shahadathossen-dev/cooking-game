@@ -49,7 +49,7 @@
                                                         class="form-group{{ $errors->has('version') ? ' has-danger' : '' }}">
                                                         <input
                                                             class="form-control{{ $errors->has('version') ? ' is-invalid' : '' }}"
-                                                            name="version" id="input-version" type="file"
+                                                            name="version" id="input-version" type="text"
                                                             placeholder="{{ __('Version') }}"
                                                             value="{{ $config->version }}" required="true"
                                                             aria-required="true" />

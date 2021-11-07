@@ -15,7 +15,7 @@ class Config extends Model
     protected $guarded = [];
     public $timestamps = false;
     protected $casts = [
-        'data' => 'array',
+        'data' => 'json',
         'created_at' => 'datetime:Y-m-d',
         'updated_at' => 'datetime:Y-m-d',
     ];
