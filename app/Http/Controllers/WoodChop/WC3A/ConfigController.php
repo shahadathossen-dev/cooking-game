@@ -14,9 +14,9 @@ class ConfigController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Config $config)
+    public function index(Request $request)
     {
-        return view('woodchop.wc3a.configs.index', ['configs' => $config->all()]);
+        return view('woodchop.wc3a.configs.index');
     }
 
     /**
@@ -24,19 +24,9 @@ class ConfigController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getConfig($version)
+    public function getConfig()
     {
-        return Config::whereVersion($version)->first()->data;
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getConfigForTest($version)
-    {
-        return Config::whereVersion($version)->first();
+        return $config = Config::firstOrFail()->data;
     }
 
     /**
@@ -57,21 +47,19 @@ class ConfigController extends Controller
      */
     public function store(ConfigRequest $request)
     {
-        $jsonContent = json_decode(file_get_contents($request->file('data')), true);
-        $file = Config::updateOrCreate(['version' => $request->version], [
-            'data' => $jsonContent,
-            'version' => $request->version
-        ]);
+        // $jsonContent = json_decode(file_get_contents($request->file('data')), true);
+        // $file = Config::updateOrCreate(['version' => $request->version], [
+        //     'data' => $jsonContent,
+        //     'version' => $request->version
+        // ]);
 
-        return redirect()->back()->withStatus(__('Danger Meter created successfully.'));
-    }
-
-    public function storeConfig(ConfigRequest $request)
-    {
-        return $config = Config::updateOrCreate(['version' => $request->version], [
-            'version' => $request->version,
+        $config = Config::updateOrCreate(['id' => 1], [
             'data' => json_decode($request->data)
         ]);
+
+        return $config->data;
+
+        // return back()->withStatus(__('Danger Meter created successfully.'));
     }
 
     /**

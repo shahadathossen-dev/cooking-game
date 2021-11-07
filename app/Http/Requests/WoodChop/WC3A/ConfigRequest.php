@@ -24,9 +24,9 @@ class ConfigRequest extends FormRequest
     public function rules()
     {
         return [
-            'data' => 'required|file|mimes:json,txt',
-            // 'data' => 'required|json',
-            'version' => 'required|string|max:255'
+            // 'data' => 'required|file|mimes:json,txt',
+            'data' => 'required|json',
+            // 'version' => 'required|string|max:255'
         ];
     }
 }

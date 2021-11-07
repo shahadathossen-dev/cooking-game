@@ -468,7 +468,7 @@
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>
-                                <a href="{{route('woodchop.wc3a.configs.create')}}" style="text-decoration: none">
+                                <a href="{{route('woodchop.wc3a.configs.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
                                             <v-icon>mdi-content-paste</v-icon>

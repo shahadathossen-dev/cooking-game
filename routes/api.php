@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 // Route::post('validate/email', [App\Http\Controllers\CraniofacialCleftBabyController::class, 'checkEmail'])->name('data.check-email');
 
 
-Route::get('woodchop/wc3a/configs/{version}', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'getConfig'])->name('woodchop.wc3a.configs.getConfig');
+Route::get('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'getConfig'])->name('woodchop.wc3a.configs.getConfig');
 
-Route::post('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'storeConfig'])->name('woodchop.wc3a.configs.store-api');
+Route::get('woodchop/wc3a/configs/test', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'getConfigForTest'])->name('woodchop.wc3a.configs.getConfigForTest');
+
+Route::post('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'store'])->name('woodchop.wc3a.configs.store-api');
