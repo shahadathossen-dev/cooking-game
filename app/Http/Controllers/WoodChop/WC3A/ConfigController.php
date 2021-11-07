@@ -26,6 +26,16 @@ class ConfigController extends Controller
      */
     public function getConfig($version)
     {
+        return Config::whereVersion($version)->first()->data;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getConfigForTest($version)
+    {
         return Config::whereVersion($version)->first();
     }
 
@@ -58,12 +68,10 @@ class ConfigController extends Controller
 
     public function storeConfig(ConfigRequest $request)
     {
-        $config = Config::updateOrCreate(['version' => $request->version], [
-            'data' => $request->data,
-            'version' => $request->version
+        return $config = Config::updateOrCreate(['version' => $request->version], [
+            'version' => $request->version,
+            'data' => json_decode($request->data)
         ]);
-
-        return ['data' => $config];
     }
 
     /**
