@@ -313,6 +313,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('woodchop/wc3a/shops/{shop}', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'destroy'])->name('woodchop.wc3a.shops.destroy');
 
     // Grade ROUTES
+    Route::get('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'index'])->name('woodchop.wc3a.configs.index');
+    Route::get('woodchop/wc3a/configs/create', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'create'])->name('woodchop.wc3a.configs.create');
+    Route::post('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'store'])->name('woodchop.wc3a.configs.store');
+    Route::get('woodchop/wc3a/configs/{level}/edit', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'edit'])->name('woodchop.wc3a.configs.edit');
+    Route::put('woodchop/wc3a/configs/{level}', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'update'])->name('woodchop.wc3a.configs.update');
+    Route::post('woodchop/wc3a/configs/{level}', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'destroy'])->name('woodchop.wc3a.configs.destroy');
+
+    // Grade ROUTES
     Route::get('woodchop/wc3a/levels', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'index'])->name('woodchop.wc3a.levels.index');
     Route::get('woodchop/wc3a/levels/create', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'create'])->name('woodchop.wc3a.levels.create');
     Route::post('woodchop/wc3a/levels', [App\Http\Controllers\WoodChop\WC3A\LevelController::class, 'store'])->name('woodchop.wc3a.levels.store');
