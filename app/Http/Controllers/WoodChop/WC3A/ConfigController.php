@@ -57,7 +57,7 @@ class ConfigController extends Controller
             'data' => json_decode($request->data)
         ]);
 
-        return $config->data;
+        return ['message' => 'Config updated successfully', 'data' => $config->data];
 
         // return back()->withStatus(__('Danger Meter created successfully.'));
     }

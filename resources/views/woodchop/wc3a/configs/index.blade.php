@@ -24,6 +24,16 @@
                         </div>
                     </div>
                 @endif
+                <div v-if="message" class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-success">
+                            <button type="button" @click="message = ''" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>@{{ message }}</span>
+                        </div>
+                    </div>
+                </div>
                 <form @submit.prevent="handleSubmit" method="post" action="{{ route('woodchop.wc3a.configs.store') }}"
                     enctype="multipart/form-data" autocomplete="off">
                     <div class="card">
@@ -59,6 +69,7 @@
                     proecssing: false,
                     booted: false,
                     superUser: '{{ auth()->user()->role_id === 1 }}',
+                    message: '',
                     config: ''
                 };
             },
@@ -75,8 +86,9 @@
                     }
 
                     try {
-                        const { data } = await axios.post('/api/woodchop/wc3a/configs', payload)
-                        this.config = this.parseJson(data);
+                        const res = await axios.post('/api/woodchop/wc3a/configs', payload)
+                        this.message = res.data.message
+                        this.config = this.parseJson(res.data.data);
                     } catch (error) {
                         console.log(error);
                     }
