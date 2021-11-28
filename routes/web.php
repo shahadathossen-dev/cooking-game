@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -440,4 +441,38 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('mbv2/deck-attributes/{attribute}/edit', [App\Http\Controllers\MBV2\AttributeController::class, 'edit'])->name('mbv2.deck-attributes.edit');
     Route::put('mbv2/deck-attributes/{attribute}', [App\Http\Controllers\MBV2\AttributeController::class, 'update'])->name('mbv2.deck-attributes.update');
     Route::post('mbv2/deck-attributes/{attribute}', [App\Http\Controllers\MBV2\AttributeController::class, 'destroy'])->name('mbv2.deck-attributes.destroy');
+
+    // PopupGame ROUTES
+    // V1A Settings ROUTES
+    Route::get('popupgame/v1a/attributes', [App\Http\Controllers\PopupGame\V1A\AttributeController::class, 'index'])->name('popupgame.v1a.attributes.index');
+    Route::get('popupgame/v1a/attributes/create', [App\Http\Controllers\PopupGame\V1A\AttributeController::class, 'create'])->name('popupgame.v1a.attributes.create');
+    Route::post('popupgame/v1a/attributes', [App\Http\Controllers\PopupGame\V1A\AttributeController::class, 'store'])->name('popupgame.v1a.attributes.store');
+    Route::get('popupgame/v1a/attributes/{attribute}/edit', [App\Http\Controllers\PopupGame\V1A\AttributeController::class, 'edit'])->name('popupgame.v1a.attributes.edit');
+    Route::put('popupgame/v1a/attributes/{attribute}', [App\Http\Controllers\PopupGame\V1A\AttributeController::class, 'update'])->name('popupgame.v1a.attributes.update');
+    Route::post('popupgame/v1a/attributes/{attribute}', [App\Http\Controllers\PopupGame\V1A\AttributeController::class, 'destroy'])->name('popupgame.v1a.attributes.destroy');
+
+    // V2A Settings ROUTES
+    Route::get('popupgame/v2a/attributes', [App\Http\Controllers\PopupGame\V2A\AttributeController::class, 'index'])->name('popupgame.v2a.attributes.index');
+    Route::get('popupgame/v2a/attributes/create', [App\Http\Controllers\PopupGame\V2A\AttributeController::class, 'create'])->name('popupgame.v2a.attributes.create');
+    Route::post('popupgame/v2a/attributes', [App\Http\Controllers\PopupGame\V2A\AttributeController::class, 'store'])->name('popupgame.v2a.attributes.store');
+    Route::get('popupgame/v2a/attributes/{attribute}/edit', [App\Http\Controllers\PopupGame\V2A\AttributeController::class, 'edit'])->name('popupgame.v2a.attributes.edit');
+    Route::put('popupgame/v2a/attributes/{attribute}', [App\Http\Controllers\PopupGame\V2A\AttributeController::class, 'update'])->name('popupgame.v2a.attributes.update');
+    Route::post('popupgame/v2a/attributes/{attribute}', [App\Http\Controllers\PopupGame\V2A\AttributeController::class, 'destroy'])->name('popupgame.v2a.attributes.destroy');
+
+    // V1B Settings ROUTES
+    Route::get('popupgame/v1b/attributes', [App\Http\Controllers\PopupGame\V1B\AttributeController::class, 'index'])->name('popupgame.v1b.attributes.index');
+    Route::get('popupgame/v1b/attributes/create', [App\Http\Controllers\PopupGame\V1B\AttributeController::class, 'create'])->name('popupgame.v1b.attributes.create');
+    Route::post('popupgame/v1b/attributes', [App\Http\Controllers\PopupGame\V1B\AttributeController::class, 'store'])->name('popupgame.v1b.attributes.store');
+    Route::get('popupgame/v1b/attributes/{attribute}/edit', [App\Http\Controllers\PopupGame\V1B\AttributeController::class, 'edit'])->name('popupgame.v1b.attributes.edit');
+    Route::put('popupgame/v1b/attributes/{attribute}', [App\Http\Controllers\PopupGame\V1B\AttributeController::class, 'update'])->name('popupgame.v1b.attributes.update');
+    Route::post('popupgame/v1b/attributes/{attribute}', [App\Http\Controllers\PopupGame\V1B\AttributeController::class, 'destroy'])->name('popupgame.v1b.attributes.destroy');
+
+    // V2B Settings ROUTES
+    Route::get('popupgame/v2b/attributes', [App\Http\Controllers\PopupGame\V2B\AttributeController::class, 'index'])->name('popupgame.v2b.attributes.index');
+    Route::get('popupgame/v2b/attributes/create', [App\Http\Controllers\PopupGame\V2B\AttributeController::class, 'create'])->name('popupgame.v2b.attributes.create');
+    Route::post('popupgame/v2b/attributes', [App\Http\Controllers\PopupGame\V2B\AttributeController::class, 'store'])->name('popupgame.v2b.attributes.store');
+    Route::get('popupgame/v2b/attributes/{attribute}/edit', [App\Http\Controllers\PopupGame\V2B\AttributeController::class, 'edit'])->name('popupgame.v2b.attributes.edit');
+    Route::put('popupgame/v2b/attributes/{attribute}', [App\Http\Controllers\PopupGame\V2B\AttributeController::class, 'update'])->name('popupgame.v2b.attributes.update');
+    Route::post('popupgame/v2b/attributes/{attribute}', [App\Http\Controllers\PopupGame\V2B\AttributeController::class, 'destroy'])->name('popupgame.v2b.attributes.destroy');
+
 });

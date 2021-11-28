@@ -682,6 +682,63 @@
                                 </a>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
+
+                        {{-- Cooking Game --}}
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>Cooking Game</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <a href="{{route('popupgame.v1a.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ '1A Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                            <v-expansion-panel-content>
+                                <a href="{{route('popupgame.v2a.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ '2A Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                            <v-expansion-panel-content>
+                                <a href="{{route('popupgame.v1b.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ '1B Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                            <v-expansion-panel-content>
+                                <a href="{{route('popupgame.v2b.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ '2B Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
                     </v-expansion-panels>
 
                     @endif

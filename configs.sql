@@ -29,8 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `configs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `data` json NOT NULL,
-  `version` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '0',
+  `data` json NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -43,9 +42,7 @@ CREATE TABLE `configs` (
 -- Indexes for table `configs`
 --
 ALTER TABLE `configs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `version` (`version`);
-
+  ADD PRIMARY KEY (`id`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
