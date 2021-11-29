@@ -685,7 +685,7 @@
 
                         {{-- Cooking Game --}}
                         <v-expansion-panel>
-                            <v-expansion-panel-header>Cooking Game</v-expansion-panel-header>
+                            <v-expansion-panel-header>Popup Game</v-expansion-panel-header>
                             <v-expansion-panel-content>
                                 <a href="{{route('popupgame.v1a.attributes.index')}}" style="text-decoration: none">
                                     <v-list-item link>
