@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'getConfig'])->name('woodchop.wc3a.configs.getConfig');
 
-Route::get('woodchop/wc3a/configs/test', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'getConfigForTest'])->name('woodchop.wc3a.configs.getConfigForTest');
 
 Route::post('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'store'])->name('woodchop.wc3a.configs.store-api');
+
+Route::get('dungeon-cleaner/configs', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'getConfig'])->name('woodchop.wc3a.configs.getConfig');
+
+
+Route::post('dungeon-cleaner/configs', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'store'])->name('woodchop.wc3a.configs.store-api');

@@ -16,7 +16,6 @@ class CreateConfigsTable extends Migration
         Schema::connection('mysql6')->create('configs', function (Blueprint $table) {
             $table->id();
             $table->json('data');
-            $table->string('version')->nullable()->default(0)->index('version');
             $table->timestamps();
         });
     }

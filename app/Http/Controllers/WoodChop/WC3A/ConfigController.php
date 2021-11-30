@@ -47,19 +47,14 @@ class ConfigController extends Controller
      */
     public function store(ConfigRequest $request)
     {
-        // $jsonContent = json_decode(file_get_contents($request->file('data')), true);
-        // $file = Config::updateOrCreate(['version' => $request->version], [
-        //     'data' => $jsonContent,
-        //     'version' => $request->version
-        // ]);
-
-        $config = Config::updateOrCreate(['id' => 1], [
-            'data' => json_decode($request->data)
+        $jsonContent = file_get_contents($request->file('data'));
+        $config = Config::create([
+            'data' => json_decode($jsonContent, true)
         ]);
 
-        return ['message' => 'Config updated successfully', 'data' => $config->data];
+        // return ['message' => 'Config updated successfully', 'data' => $config->data];
 
-        // return back()->withStatus(__('Danger Meter created successfully.'));
+        return back()->withStatus(__('Danger Meter created successfully.'));
     }
 
     /**

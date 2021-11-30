@@ -40,9 +40,10 @@
                         <div class="card-header card-header-primary content-header">
                             <h3 class="card-title">{{ __('Update Config [JSON]') }}</h3>
                             <div class="form-group text-center">
-                                <button type="submit" class="btn btn-primary ml-auto">
+                                <button v-if="config" type="submit" class="btn btn-primary ml-auto">
                                     {{ __('Update') }}
                                 </button>
+                                <a v-else class="btn btn-primary ml-auto" href="{{ route('dungeon-cleaner.configs.create') }}">Create New</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -86,7 +87,7 @@
                     }
 
                     try {
-                        const res = await axios.post('/api/woodchop/wc3a/configs', payload)
+                        const res = await axios.post('/api/dungeon-cleaner/configs', payload)
                         this.message = res.data.message
                         this.config = this.parseJson(res.data.data);
                     } catch (error) {
@@ -95,7 +96,7 @@
                 },
                 async getConfig() {
                     try {
-                        const { data } = await axios.get('/api/woodchop/wc3a/configs')
+                        const { data } = await axios.get('/api/dungeon-cleaner/configs')
                         this.config = this.parseJson(data);
                     } catch (error) {
                         console.log(error);
