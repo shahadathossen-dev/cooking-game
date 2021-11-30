@@ -13,7 +13,7 @@ class CreateConfigsTable extends Migration
      */
     public function up()
     {
-        Schema::create('configs', function (Blueprint $table) {
+        Schema::connection('mysql6')->create('configs', function (Blueprint $table) {
             $table->id();
             $table->json('data');
             $table->string('version')->nullable()->default(0)->index('version');

@@ -352,18 +352,6 @@
                         <v-expansion-panel>
                             <v-expansion-panel-header>Dungeon Cleaner</v-expansion-panel-header>
                             <v-expansion-panel-content>
-
-                                <a href="{{route('dungeon-cleaner.attributes.index')}}" style="text-decoration: none">
-                                    <v-list-item link>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-content-paste</v-icon>
-                                        </v-list-item-icon>
-
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </a>
                                 <a href="{{route('dungeon-cleaner.pillur-coordinates.index')}}" style="text-decoration: none">
                                     <v-list-item link>
                                         <v-list-item-icon>
@@ -383,6 +371,28 @@
 
                                         <v-list-item-content>
                                             <v-list-item-title>{{ 'Tile Spawns' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('dungeon-cleaner.attributes.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Attributes' }}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </a>
+                                <a href="{{route('dungeon-cleaner.configs.index')}}" style="text-decoration: none">
+                                    <v-list-item link>
+                                        <v-list-item-icon>
+                                            <v-icon>mdi-content-paste</v-icon>
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>{{ 'Configs' }}</v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
                                 </a>

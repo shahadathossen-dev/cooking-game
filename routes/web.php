@@ -288,6 +288,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('dungeon-cleaner/tile-spawns/{tileSpawn}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'update'])->name('dungeon-cleaner.tile-spawns.update');
     Route::post('dungeon-cleaner/tile-spawns/{tileSpawn}', [App\Http\Controllers\DungeonCleaner\TileSpawnController::class, 'destroy'])->name('dungeon-cleaner.tile-spawns.destroy');
 
+    // Config ROUTES
+    Route::get('dungeon-cleaner/configs', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'index'])->name('dungeon-cleaner.configs.index');
+    Route::get('dungeon-cleaner/configs/create', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'create'])->name('dungeon-cleaner.configs.create');
+    Route::post('dungeon-cleaner/configs', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'store'])->name('dungeon-cleaner.configs.store');
+    Route::get('dungeon-cleaner/configs/{level}/edit', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'edit'])->name('dungeon-cleaner.configs.edit');
+    Route::put('dungeon-cleaner/configs/{level}', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'update'])->name('dungeon-cleaner.configs.update');
+    Route::post('dungeon-cleaner/configs/{level}', [App\Http\Controllers\DungeonCleaner\ConfigController::class, 'destroy'])->name('dungeon-cleaner.configs.destroy');
+
     // WC3A ROUTES
     // Settings ROUTES
     Route::get('woodchop/wc3a/attributes', [App\Http\Controllers\WoodChop\WC3A\AttributeController::class, 'index'])->name('woodchop.wc3a.attributes.index');
@@ -313,7 +321,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('woodchop/wc3a/shops/{shop}', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'update'])->name('woodchop.wc3a.shops.update');
     Route::post('woodchop/wc3a/shops/{shop}', [App\Http\Controllers\WoodChop\WC3A\ShopController::class, 'destroy'])->name('woodchop.wc3a.shops.destroy');
 
-    // Grade ROUTES
+    // Config ROUTES
     Route::get('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'index'])->name('woodchop.wc3a.configs.index');
     Route::get('woodchop/wc3a/configs/create', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'create'])->name('woodchop.wc3a.configs.create');
     Route::post('woodchop/wc3a/configs', [App\Http\Controllers\WoodChop\WC3A\ConfigController::class, 'store'])->name('woodchop.wc3a.configs.store');
