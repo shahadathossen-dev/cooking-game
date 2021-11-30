@@ -43,7 +43,7 @@
                                 <button v-if="config" type="submit" class="btn btn-primary ml-auto">
                                     {{ __('Update') }}
                                 </button>
-                                <a v-else class="btn btn-primary ml-auto" href="{{ route('dungeon-cleaner.configs.create') }}">Create New</a>
+                                {{-- <a v-else class="btn btn-primary ml-auto" href="{{ route('dungeon-cleaner.configs.create') }}">Create New</a> --}}
                             </div>
                         </div>
                         <div class="card-body">
